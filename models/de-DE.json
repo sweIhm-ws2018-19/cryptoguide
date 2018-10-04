@@ -25,7 +25,8 @@
           ],
           "samples": [
             " Meine Lieblingsfarbe ist {Color}",
-            " Ich mag {Color}"
+            " Ich mag {Color}",
+            " {Color} ist meine Lieblingsfarbe"
           ]
         },
         {
