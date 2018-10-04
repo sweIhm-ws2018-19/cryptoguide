@@ -35,7 +35,7 @@
           "name": "WhatsMyColorIntent",
           "slots": [],
           "samples": [
-            "was ist meine Farbe",
+            "was ist meine Lieblingsfarbe",
             "welche Farbe mag ich am liebsten",
             "sag mir meine Lieblingsfarbe"
           ]
