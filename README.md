@@ -1,5 +1,5 @@
 # CryptoGuide - dein Helfer für Kryptowährungen
-CryptoGuide hilft dir Informationen bezüglich Krytowährungen zu erhalten.
+CryptoGuide hilft dir Informationen bezüglich Krytowährungskursen zu erhalten.
 Dies betrifft aktuelle sowie vergangene Kurse, sowie Umrechnungen von verschiedenen Währungen.
 Du kannst außerdem den Verlauf eines Kurses innerhalb einer bestimmten Zeitspanne ermitteln.
 Du kannst CryptoGuide deine gekauften Währungen mitteilen und deinem Portfolio hinzufügen.
