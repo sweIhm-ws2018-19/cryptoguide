@@ -16,15 +16,18 @@ addons:
     organization: "sweihmws2018-19"
 
 deploy:
+  //Test Key
   access_key_id: "ASIAR7LGS44BKYXKKMXW"
   secret_access_key: "NR+0+SucxU4YL0SxQSRNrW/OOf07Wfzthd6POBF6"
 
   provider: lambda
   function_name: "lieblingsfarbe"
   region: "us-east-1"
-  role: "arn:aws:iam::117265078110:role/lambda_basic_execution"
+  role: "arn:aws:iam::136043489026:user/"
   runtime: "java8"
   handler_name: "main.java.colorpicker.ColorPickerStreamHandler"
+
+
 
 
 
