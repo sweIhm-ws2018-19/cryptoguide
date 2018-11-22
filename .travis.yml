@@ -8,4 +8,19 @@ install:
 
 
 script:
-  mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
+- mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pdev sonar:sonar
+- mvn org.apache.maven.plugins:maven-assembly-plugin:2.6:assembly -DdescriptorId=jar-with-dependencies package
+
+addons:
+  sonarcloud:
+    organization: "sweihmws2018-19"
+
+deploy:
+  provider: lambda
+  function_name: "lieblingsfarbe"
+  region: "us-east-1"
+  role: "arn:aws:iam::117265078110:role/lambda_basic_execution"
+  runtime: "java8"
+  handler_name: "main.java.colorpicker.ColorPickerStreamHandler"
+  access_key_id: "ASIARWTMLC5PBQRVBL7E"
+  secret_access_key: "Ypr95Ji1AtxLDKWceAEXJeQ2dwhR/QwZ7irQfzRy"
