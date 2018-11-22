@@ -1,0 +1,29 @@
+public class Konto {
+    private String bezeichnung;
+    private Kunde[] zeichnungsberechtigter;
+
+    public GeldBetrag saldo();
+    public void(GeldBetrag eingBetrag);
+}
+
+public abstract class Kunde {
+    private Konto[] konto;
+}
+
+public class Privatkunde extends Kunde {
+    private String vorname;
+    private String nachname;
+    private Adresse postAdresse;
+}
+
+public class Geschaeftskunde extends Kunde {
+    private String firmenname;
+    private Adresse domizilAdresse;
+}
+
+public class Adresse {
+    private String strasse;
+    private int hausnummer;
+    private String plz;
+    private String ort;
+}
