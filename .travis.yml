@@ -22,5 +22,5 @@ deploy:
   role: "arn:aws:iam::117265078110:role/lambda_basic_execution"
   runtime: "java8"
   handler_name: "main.java.colorpicker.ColorPickerStreamHandler"
-  access_key_id: "ASIARWTMLC5PBQRVBL7E"
-  secret_access_key: "Ypr95Ji1AtxLDKWceAEXJeQ2dwhR/QwZ7irQfzRy"
+  access_key_id: "ASIARWTMLC5POFEA2276"
+  secret_access_key: "+7rHPBz84tRBX6xiNHCqH3zOFko3moAkJxVmQ0Rr"
