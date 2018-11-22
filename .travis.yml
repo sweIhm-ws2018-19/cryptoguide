@@ -16,7 +16,6 @@ addons:
     organization: "sweihmws2018-19"
 
 deploy:
-  //Test Key
   access_key_id: "ASIAR7LGS44BKYXKKMXW"
   secret_access_key: "NR+0+SucxU4YL0SxQSRNrW/OOf07Wfzthd6POBF6"
 
