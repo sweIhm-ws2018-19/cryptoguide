@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "cryptoguide",
+      "invocationName": "crypto guide",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -9,7 +9,11 @@
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": []
+          "samples": [
+            "Hilfe",
+            "Öffne Hilfe",
+            "Hilfe öffnen"
+          ]
         },
         {
           "name": "AMAZON.StopIntent",

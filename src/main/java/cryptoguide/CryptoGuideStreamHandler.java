@@ -20,17 +20,13 @@ import cryptoguide.handlers.FallbackIntentHandler;
 import cryptoguide.handlers.HelpIntentHandler;
 import cryptoguide.handlers.LaunchRequestHandler;
 import cryptoguide.handlers.SessionEndedRequestHandler;
-import cryptoguide.handlers.WhatsMyColorIntentHandler;
 import cryptoguide.handlers.CancelandStopIntentHandler;
-import cryptoguide.handlers.MyColorIsIntentHandler;
 
 public class CryptoGuideStreamHandler extends SkillStreamHandler {
 
     private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
-                        new WhatsMyColorIntentHandler(),
-                        new MyColorIsIntentHandler(),
                         new LaunchRequestHandler(),
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),

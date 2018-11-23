@@ -30,6 +30,10 @@ import static cryptoguide.handlers.WhatsMyColorIntentHandler.COLOR_KEY;
 import static cryptoguide.handlers.WhatsMyColorIntentHandler.COLOR_SLOT;
 import static com.amazon.ask.request.Predicates.intentName;
 
+/**
+ * HANDLER WIRD NICHT MEHR GEBRAUCHT, IST NUR ZUM ORIENTIEREN FÜR ANDERE HANDLER
+ */
+
 public class MyColorIsIntentHandler implements RequestHandler {
     @Override
     public boolean canHandle(HandlerInput input) {

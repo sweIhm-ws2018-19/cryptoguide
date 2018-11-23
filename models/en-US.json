@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "color picker",
+      "invocationName": "crypto guide",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
