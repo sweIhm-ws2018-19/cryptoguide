@@ -19,7 +19,7 @@ deploy:
   provider: lambda
   function_name: "lieblingsfarbe"
   region: "us-east-1"
-  role: "arn:aws:iam::136043489026:user/"
+  role: "arn:aws:iam::136043489026:role/lambda_basic_execution"
   runtime: "java8"
   handler_name: "main.java.colorpicker.ColorPickerStreamHandler"
 
