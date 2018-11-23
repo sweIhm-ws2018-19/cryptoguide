@@ -11,20 +11,20 @@
      the specific language governing permissions and limitations under the License.
 */
 
-package main.java.colorpicker;
+package cryptoguide;
 
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
-import main.java.colorpicker.handlers.FallbackIntentHandler;
-import main.java.colorpicker.handlers.HelpIntentHandler;
-import main.java.colorpicker.handlers.LaunchRequestHandler;
-import main.java.colorpicker.handlers.SessionEndedRequestHandler;
-import main.java.colorpicker.handlers.WhatsMyColorIntentHandler;
-import main.java.colorpicker.handlers.CancelandStopIntentHandler;
-import main.java.colorpicker.handlers.MyColorIsIntentHandler;
+import cryptoguide.handlers.FallbackIntentHandler;
+import cryptoguide.handlers.HelpIntentHandler;
+import cryptoguide.handlers.LaunchRequestHandler;
+import cryptoguide.handlers.SessionEndedRequestHandler;
+import cryptoguide.handlers.WhatsMyColorIntentHandler;
+import cryptoguide.handlers.CancelandStopIntentHandler;
+import cryptoguide.handlers.MyColorIsIntentHandler;
 
-public class ColorPickerStreamHandler extends SkillStreamHandler {
+public class CryptoGuideStreamHandler extends SkillStreamHandler {
 
     private static Skill getSkill() {
         return Skills.standard()
@@ -37,11 +37,11 @@ public class ColorPickerStreamHandler extends SkillStreamHandler {
                         new HelpIntentHandler(),
                         new FallbackIntentHandler())
                 // Add your skill id below
-                //.withSkillId("")
+                .withSkillId("amzn1.ask.skill.e8f22f70-b411-48f8-af42-aac285687fa8")
                 .build();
     }
 
-    public ColorPickerStreamHandler() {
+    public CryptoGuideStreamHandler() {
         super(getSkill());
     }
 

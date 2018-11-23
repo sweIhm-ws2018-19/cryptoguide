@@ -15,12 +15,12 @@ addons:
   sonarcloud:
     organization: "sweihmws2018-19"
 
-deploy:
-  provider: lambda
-  function_name: "lieblingsfarbe"
-  region: "us-east-1"
-  role: "arn:aws:iam::117265078110:role/lambda_basic_execution"
-  runtime: "java8"
-  handler_name: "main.java.colorpicker.ColorPickerStreamHandler"
-  access_key_id: "ASIARWTMLC5POFEA2276"
-  secret_access_key: "+7rHPBz84tRBX6xiNHCqH3zOFko3moAkJxVmQ0Rr"
+#deploy:
+#  provider: lambda
+#  function_name: "cryptoguide"
+#  region: "us-east-1"
+#  role: "arn:aws:iam::117265078110:role/lambda_basic_execution"
+#  runtime: "java8"
+#  handler_name: "main.java.cryptoguide.CryptoGuideStreamHandler"
+#  access_key_id: "ASIARWTMLC5POFEA2276"
+#  secret_access_key: "+7rHPBz84tRBX6xiNHCqH3zOFko3moAkJxVmQ0Rr"

@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>alexa-skills-kit-samples</groupId>
-  <artifactId>colorpicker</artifactId>
+  <artifactId>CryptoGuide</artifactId>
   <packaging>jar</packaging>
   <version>1.0</version>
-  <name>colorpicker</name>
+  <name>CryptoGuide</name>
   <url>http://developer.amazon.com/ask</url>
   <licenses>
     <license>
@@ -15,9 +15,9 @@
   </licenses>
   <developers>
     <developer>
-      <name>Alexa Skills Kit</name>
-      <email>ask-sdk-java@amazon.com</email>
-      <organization>Alexa</organization>
+      <name>Unternehmen Do-3</name>
+      <email></email>
+      <organization>Unternehmen-Do-3</organization>
       <organizationUrl>http://developer.amazon.com/ask</organizationUrl>
     </developer>
   </developers>
