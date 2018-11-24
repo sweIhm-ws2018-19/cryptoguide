@@ -20,7 +20,7 @@ public class FallbackIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Tut mir leid, das habe ich nicht verstanden. Sage einfach: Öffne Hilfe.";
+        String speechText = "Tut mir leid, das habe ich nicht verstanden. Sage einfach: Hilfe.";
         return input.getResponseBuilder()
                 .withSpeech(speechText)
                 .withSimpleCard("Achtung", "Das habe ich nicht verstanden.")

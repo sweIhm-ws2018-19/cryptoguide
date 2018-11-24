@@ -9,40 +9,11 @@
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": [
-            "Hilfe",
-            "Öffne Hilfe",
-            "Hilfe öffnen"
-          ]
+          "samples": []
         },
         {
           "name": "AMAZON.StopIntent",
           "samples": []
-        },
-        {
-          "name": "MyColorIsIntent",
-          "slots": [
-            {
-              "name": "Color",
-              "type": "LIST_OF_COLORS"
-            }
-          ],
-          "samples": [
-            " Meine Lieblingsfarbe ist {Color}",
-            " Ich mag {Color}",
-            " {Color} ist meine Lieblingsfarbe",
-            " {Color} ist keine meiner Lieblingsfarbe",
-            "{Color}"
-          ]
-        },
-        {
-          "name": "WhatsMyColorIntent",
-          "slots": [],
-          "samples": [
-            "was ist meine Lieblingsfarbe",
-            "welche Farbe mag ich am liebsten",
-            "sag mir meine Lieblingsfarbe"
-          ]
         },
         {
           "name": "AMAZON.PauseIntent",
@@ -53,53 +24,7 @@
           "samples": []
         }
       ],
-      "types": [
-        {
-          "name": "LIST_OF_COLORS",
-          "values": [
-            {
-              "name": {
-                "value": "grün"
-              }
-            },
-            {
-              "name": {
-                "value": "blau"
-              }
-            },
-            {
-              "name": {
-                "value": "lila"
-              }
-            },
-            {
-              "name": {
-                "value": "rot"
-              }
-            },
-            {
-              "name": {
-                "value": "orange"
-              }
-            },
-            {
-              "name": {
-                "value": "rosa"
-              }
-            },
-            {
-              "name": {
-                "value": "türkis"
-              }
-            },
-            {
-              "name": {
-                "value": "gelb"
-              }
-            }
-          ]
-        }
-      ]
+      "types": []
     }
   }
 }

@@ -30,7 +30,7 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Willkommen bei CryptoGuide. Wie kann ich dir helfen? Bist du zum ersten Mal hier dann sage: Öffne Hilfe.";
+        String speechText = "Willkommen bei CryptoGuide. Wie kann ich dir helfen? Bist du zum ersten Mal hier dann sage: Hilfe.";
         String repromptText = "Was kann ich denn für dich tun?";
         return input.getResponseBuilder()
                 .withSimpleCard("Willkommen bei CryptoGuide", speechText)
