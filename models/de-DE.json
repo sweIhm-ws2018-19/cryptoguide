@@ -5,23 +5,33 @@
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
-          "samples": []
+          "samples": [
+            "Abbrechen"
+          ]
         },
         {
           "name": "AMAZON.HelpIntent",
-          "samples": []
+          "samples": [
+            "Hilfe"
+          ]
         },
         {
           "name": "AMAZON.StopIntent",
-          "samples": []
+          "samples": [
+            "Beenden"
+          ]
         },
         {
           "name": "AMAZON.PauseIntent",
-          "samples": []
+          "samples": [
+            "Pause"
+          ]
         },
         {
           "name": "AMAZON.ResumeIntent",
-          "samples": []
+          "samples": [
+            "Weiter"
+          ]
         }
       ],
       "types": []
