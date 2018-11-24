@@ -16,11 +16,7 @@ package cryptoguide;
 import com.amazon.ask.Skill;
 import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
-import cryptoguide.handlers.FallbackIntentHandler;
-import cryptoguide.handlers.HelpIntentHandler;
-import cryptoguide.handlers.LaunchRequestHandler;
-import cryptoguide.handlers.SessionEndedRequestHandler;
-import cryptoguide.handlers.CancelandStopIntentHandler;
+import cryptoguide.handlers.*;
 
 public class CryptoGuideStreamHandler extends SkillStreamHandler {
 
@@ -31,6 +27,7 @@ public class CryptoGuideStreamHandler extends SkillStreamHandler {
                         new CancelandStopIntentHandler(),
                         new SessionEndedRequestHandler(),
                         new HelpIntentHandler(),
+                        new GetCurrencyRateHandler(),
                         new FallbackIntentHandler())
                 .withSkillId("amzn1.ask.skill.e8f22f70-b411-48f8-af42-aac285687fa8")
                 .build();

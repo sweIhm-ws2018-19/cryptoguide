@@ -32,6 +32,12 @@
           "samples": [
             "Weiter"
           ]
+        },
+        {
+          "name": "GetCurrencyIntent",
+          "samples": [
+            "Wie ist der aktuelle Kurs von Bitcoin"
+          ]
         }
       ],
       "types": []

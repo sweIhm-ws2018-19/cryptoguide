@@ -16,7 +16,7 @@
   <developers>
     <developer>
       <name>Unternehmen Do-3</name>
-      <email></email>
+      <email>weinstab@hm.edu</email>
       <organization>Unternehmen-Do-3</organization>
       <organizationUrl>http://developer.amazon.com/ask</organizationUrl>
     </developer>
@@ -38,6 +38,11 @@
       <artifactId>junit</artifactId>
       <version>4.12</version>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.eclipsesource.minimal-json</groupId>
+      <artifactId>minimal-json</artifactId>
+      <version>0.9.5</version>
     </dependency>
   </dependencies>
 
