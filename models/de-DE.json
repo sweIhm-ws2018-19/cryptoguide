@@ -6,7 +6,7 @@
         {
           "name": "AMAZON.CancelIntent",
           "samples": [
-            "Abbrechen"
+            "Beenden"
           ]
         },
         {
@@ -34,7 +34,7 @@
           ]
         },
         {
-          "name": "GetCurrencyIntent",
+          "name": "GetCurrentCurrencyRateIntent",
           "samples": [
             "Wie ist der aktuelle Kurs von Bitcoin"
           ]

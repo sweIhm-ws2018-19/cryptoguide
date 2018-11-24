@@ -1,4 +1,4 @@
-package model;
+package cryptoguide.model;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class GetCurrencyRateTest {
         String secondCurrency = "ETH";
         float test = CryptoCurrencyRateRetriever.getCurrentRate(firstCurrency, secondCurrency);
         System.out.println(test);
-        Assert.assertTrue(test != 0.0f);
+        Assert.assertNotEquals(test,0.0f);
     }
 
     @Test
@@ -30,7 +30,7 @@ public class GetCurrencyRateTest {
         String secondCurrency = "BTC";
         float test = CryptoCurrencyRateRetriever.getCurrentRate(firstCurrency, secondCurrency);
         System.out.println(test);
-        Assert.assertTrue(test != 0.0f);
+        Assert.assertNotEquals(test,0.0f);
     }
 
     @Test
@@ -39,7 +39,7 @@ public class GetCurrencyRateTest {
         String secondCurrency = "BTC";
         float test = CryptoCurrencyRateRetriever.getCurrentRate(firstCurrency, secondCurrency);
         System.out.println(test);
-        Assert.assertTrue(test == 1.0f);
+        Assert.assertEquals(test,1.0f ,0.0f);
     }
 
     @Test
@@ -48,7 +48,7 @@ public class GetCurrencyRateTest {
         String secondCurrency = "BTC";
         float test = CryptoCurrencyRateRetriever.getCurrentRate(firstCurrency, secondCurrency);
         System.out.println(test);
-        Assert.assertTrue(test == 0.0f);
+        Assert.assertEquals(test, 0.0f,0.0f);
     }
 
     @Test
@@ -57,7 +57,7 @@ public class GetCurrencyRateTest {
         String secondCurrency = "asdfasdf";
         float test = CryptoCurrencyRateRetriever.getCurrentRate(firstCurrency, secondCurrency);
         System.out.println(test);
-        Assert.assertTrue(test == 0.0f);
+        Assert.assertEquals(test, 0.0f, 0.0f);
     }
 
     @Test
@@ -66,7 +66,7 @@ public class GetCurrencyRateTest {
         String secondCurrency = "asdfasdf";
         float test = CryptoCurrencyRateRetriever.getCurrentRate(firstCurrency, secondCurrency);
         System.out.println(test);
-        Assert.assertTrue(test == 0.0f);
+        Assert.assertEquals(test, 0.0f, 0.0f);
     }
 
 }

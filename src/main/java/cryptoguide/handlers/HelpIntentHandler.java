@@ -16,6 +16,7 @@ package cryptoguide.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import cryptoguide.other.AlexaTexts;
 
 import java.util.Optional;
 
@@ -29,12 +30,10 @@ public class HelpIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Benötigst du Hilfe zu A oder B?";
-        String repromptText = "Zu was benötigst du Hilfe? A oder B?";
         return input.getResponseBuilder()
-                .withSimpleCard("Hilfe", speechText)
-                .withSpeech(speechText)
-                .withReprompt(repromptText)
+                .withSimpleCard(AlexaTexts.HI_CTH, AlexaTexts.HI_SP)
+                .withSpeech(AlexaTexts.HI_SP)
+                .withReprompt(AlexaTexts.HI_RP)
                 .withShouldEndSession(false)
                 .build();
     }

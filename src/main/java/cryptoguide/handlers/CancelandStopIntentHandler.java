@@ -16,6 +16,7 @@ package cryptoguide.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import cryptoguide.other.AlexaTexts;
 
 import java.util.Optional;
 
@@ -30,8 +31,8 @@ public class CancelandStopIntentHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         return input.getResponseBuilder()
-                .withSpeech("Auf Wiedersehen")
-                .withSimpleCard("Skill beendet", "Danke, dass du CryptoGuide verwendet hast.")
+                .withSpeech(AlexaTexts.CSI_SP)
+                .withSimpleCard(AlexaTexts.CSI_CTH, AlexaTexts.CSI_CTT)
                 .build();
     }
 }

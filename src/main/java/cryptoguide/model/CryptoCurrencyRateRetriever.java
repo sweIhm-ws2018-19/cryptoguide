@@ -3,9 +3,9 @@ package cryptoguide.model;
 import com.eclipsesource.json.Json;
 import com.eclipsesource.json.JsonObject;
 
+import javax.net.ssl.HttpsURLConnection;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.Date;
 
@@ -17,7 +17,7 @@ public class CryptoCurrencyRateRetriever {
 
         float value = 0.0f;
         try {
-            HttpURLConnection getRateConnection = (HttpURLConnection) new URL(CURRENT_RATE_REQUEST + "fsym=" + primaryCurrency + "&tsyms=" + secondaryCurrency).openConnection();
+            HttpsURLConnection getRateConnection = (HttpsURLConnection) new URL(CURRENT_RATE_REQUEST + "fsym=" + primaryCurrency + "&tsyms=" + secondaryCurrency).openConnection();
             getRateConnection.setRequestMethod("GET");
             InputStreamReader rateReader = new InputStreamReader(getRateConnection.getInputStream());
             JsonObject jsonResponse = Json.parse(rateReader).asObject();

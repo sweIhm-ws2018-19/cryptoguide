@@ -17,6 +17,7 @@ import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.LaunchRequest;
 import com.amazon.ask.model.Response;
+import cryptoguide.other.AlexaTexts;
 
 import java.util.Optional;
 
@@ -30,12 +31,10 @@ public class LaunchRequestHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Willkommen bei CryptoGuide. Wie kann ich dir helfen? Bist du zum ersten Mal hier dann sage: Hilfe.";
-        String repromptText = "Was kann ich denn für dich tun?";
         return input.getResponseBuilder()
-                .withSimpleCard("Willkommen bei CryptoGuide", speechText)
-                .withSpeech(speechText)
-                .withReprompt(repromptText)
+                .withSimpleCard(AlexaTexts.LRM_CTH, AlexaTexts.LRM_SP)
+                .withSpeech(AlexaTexts.LRM_SP)
+                .withReprompt(AlexaTexts.LRM_RP)
                 .build();
     }
 }

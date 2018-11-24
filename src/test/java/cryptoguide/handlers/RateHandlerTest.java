@@ -1,4 +1,4 @@
-package handlers;
+package cryptoguide.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import org.junit.Assert;

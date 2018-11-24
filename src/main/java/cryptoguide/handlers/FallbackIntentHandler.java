@@ -3,6 +3,7 @@ package cryptoguide.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
+import cryptoguide.other.AlexaTexts;
 
 import java.util.Optional;
 
@@ -20,11 +21,10 @@ public class FallbackIntentHandler implements RequestHandler {
 
     @Override
     public Optional<Response> handle(HandlerInput input) {
-        String speechText = "Tut mir leid, das habe ich nicht verstanden. Sage einfach: Hilfe.";
         return input.getResponseBuilder()
-                .withSpeech(speechText)
-                .withSimpleCard("Achtung", "Das habe ich nicht verstanden.")
-                .withReprompt(speechText)
+                .withSpeech(AlexaTexts.FBI_SP)
+                .withSimpleCard(AlexaTexts.FBI_CTH, AlexaTexts.FBI_CTT)
+                .withReprompt(AlexaTexts.FBI_SP)
                 .build();
     }
 
