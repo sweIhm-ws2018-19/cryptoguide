@@ -35,12 +35,95 @@
         },
         {
           "name": "GetCurrentCurrencyRateIntent",
+          "slots": [
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "secondaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            }
+          ],
           "samples": [
-            "Wie ist der aktuelle Kurs von Bitcoin"
+            "Wie ist der aktuelle Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Wie ist der aktuelle Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Was is der Wert von {primaryCurrency} zu {secondaryCurrency}"
           ]
         }
       ],
-      "types": []
+      "types": [
+        {
+          "name": "LIST_OF_CURRENCIES",
+          "values": [
+            {
+              "name": {
+                "value": "Bitcoin"
+              }
+            },
+            {
+              "name": {
+                "value": "Ethereum"
+              }
+            },
+            {
+              "name": {
+                "value": "XRP"
+              }
+            },
+            {
+              "name": {
+                "value": "EOS"
+              }
+            },
+            {
+              "name": {
+                "value": "Z Cash"
+              }
+            },
+            {
+              "name": {
+                "value": "Litecoin"
+              }
+            },
+            {
+              "name": {
+                "value": "Dash"
+              }
+            },
+            {
+              "name": {
+                "value": "Ethereum Classic"
+              }
+            },
+            {
+              "name": {
+                "value": "QTUM"
+              }
+            },
+            {
+              "name": {
+                "value": "Dollar"
+              }
+            },
+            {
+              "name": {
+                "value": "US Dollar"
+              }
+            },
+            {
+              "name": {
+                "value": "Euro"
+              }
+            },
+            {
+              "name": {
+                "value": "Yen"
+              }
+            }
+          ]
+        }
+      ]
     }
   }
 }

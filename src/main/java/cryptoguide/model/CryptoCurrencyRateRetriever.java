@@ -8,12 +8,21 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class CryptoCurrencyRateRetriever {
 
+    // This is a static class so we need a private constructor to hide the standard public one.
+    private CryptoCurrencyRateRetriever() {
+        throw new IllegalStateException("This is a static class, can't create a instance.");
+    }
+
     private static final String CURRENT_RATE_REQUEST = "https://min-api.cryptocompare.com/data/price?";
+    private static final Logger logger = Logger.getLogger(CryptoCurrencyRateRetriever.class.getName());
 
     public static float getCurrentRate(String primaryCurrency, String secondaryCurrency) {
+
 
         float value = 0.0f;
         try {
@@ -26,14 +35,10 @@ public class CryptoCurrencyRateRetriever {
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logger.log(Level.WARNING, "Could not connect to the CryptoCompare-API or created a IOException during connection");
         }
 
         return value;
-    }
-
-    public static float getPastRate(Date pastDate, String primaryCurrency, String secondaryCurrency) {
-        return  0.0f;
     }
 
 }
