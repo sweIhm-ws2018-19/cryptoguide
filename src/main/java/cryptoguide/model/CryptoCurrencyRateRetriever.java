@@ -21,8 +21,6 @@ public class CryptoCurrencyRateRetriever {
     private static final Logger logger = Logger.getLogger(CryptoCurrencyRateRetriever.class.getName());
 
     public static float getCurrentRate(String primaryCurrency, String secondaryCurrency) {
-
-
         float value = 0.0f;
         try {
             HttpsURLConnection getRateConnection = (HttpsURLConnection) new URL(CURRENT_RATE_REQUEST + "fsym=" + primaryCurrency + "&tsyms=" + secondaryCurrency).openConnection();

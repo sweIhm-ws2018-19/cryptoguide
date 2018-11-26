@@ -12,14 +12,14 @@ public class ToSymbolConverter {
     private static final HashMap<String, String> currencyMap = new HashMap<>();
 
     static{
-        currencyMap.put("bitcoin", "BTC");
+        currencyMap.put("bitcon", "BTC");
         currencyMap.put("xrp", "XRP");
         currencyMap.put("ethereum", "ETH");
         currencyMap.put("eos", "EOS");
         currencyMap.put("z cash", "ZEC");
         currencyMap.put("litecoin", "LTC");
         currencyMap.put("dash", "DASH");
-        currencyMap.put("ethereum Classic", "ETC");
+        currencyMap.put("ethereum classic", "ETC");
         currencyMap.put("qtum", "QTUM");
         currencyMap.put("dollar", "USD");
         currencyMap.put("us dollar", "USD");

@@ -48,7 +48,14 @@
           "samples": [
             "Wie ist der aktuelle Kurs von {primaryCurrency} in {secondaryCurrency}",
             "Wie ist der aktuelle Kurs von {primaryCurrency} zu {secondaryCurrency}",
-            "Was is der Wert von {primaryCurrency} zu {secondaryCurrency}"
+            "Was ist der aktuelle Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Was ist der aktuelle Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Wie ist der Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Wie ist der Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Was ist der Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Was ist der Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Kurs von {primaryCurrency} zu {secondaryCurrency}"
           ]
         }
       ],
