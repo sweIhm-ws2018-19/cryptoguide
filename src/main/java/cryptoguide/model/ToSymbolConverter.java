@@ -11,22 +11,21 @@ public class ToSymbolConverter {
 
     private static final HashMap<String, String> currencyMap = new HashMap<>();
 
-    static {
-        currencyMap.put("Bitcoin", "BTC");
-        currencyMap.put("XRP", "XRP");
-        currencyMap.put("Ethereum", "ETH");
-        currencyMap.put("EOS", "EOS");
-        currencyMap.put("Z Cash", "ZEC");
-        currencyMap.put("Litecoin", "LTC");
-        currencyMap.put("Dash", "DASH");
-        currencyMap.put("Ethereum Classic", "ETC");
-        currencyMap.put("QTUM", "QTUM");
-        currencyMap.put("Dollar", "USD");
-        currencyMap.put("US Dollar", "USD");
-        currencyMap.put("Euro", "EUR");
-        currencyMap.put("Yen", "YEN");
+    static{
+        currencyMap.put("bitcoin", "BTC");
+        currencyMap.put("xrp", "XRP");
+        currencyMap.put("ethereum", "ETH");
+        currencyMap.put("eos", "EOS");
+        currencyMap.put("z cash", "ZEC");
+        currencyMap.put("litecoin", "LTC");
+        currencyMap.put("dash", "DASH");
+        currencyMap.put("ethereum Classic", "ETC");
+        currencyMap.put("qtum", "QTUM");
+        currencyMap.put("dollar", "USD");
+        currencyMap.put("us dollar", "USD");
+        currencyMap.put("euro", "EUR");
+        currencyMap.put("yen", "YEN");
     }
-
 
     public static String convert(String currency) {
         return currencyMap.get(currency);

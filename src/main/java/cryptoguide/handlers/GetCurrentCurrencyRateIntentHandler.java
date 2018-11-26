@@ -29,8 +29,8 @@ public class GetCurrentCurrencyRateIntentHandler implements RequestHandler {
         // Get our two currencies
         Slot primaryCurrency = slots.get("primaryCurrency");
         Slot secondaryCurrency = slots.get("secondaryCurrency");
-        String primarySymbol = ToSymbolConverter.convert(primaryCurrency.toString());
-        String secondarySymbol = ToSymbolConverter.convert(primaryCurrency.toString());
+        String primarySymbol = ToSymbolConverter.convert(primaryCurrency.toString().toLowerCase());
+        String secondarySymbol = ToSymbolConverter.convert(primaryCurrency.toString().toLowerCase());
         String speechText = AlexaTexts.GCCRI_SP_ERROR;
 
         if (primarySymbol == null || secondarySymbol == null) {
