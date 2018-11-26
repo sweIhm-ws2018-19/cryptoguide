@@ -7,25 +7,25 @@ public class ToSymbolConverterTest {
 
     @Test
     public void ToSymbolConverterTest1() {
-        String Currency = "bitcoin";
+        String currency = "bitcoin";
         String symbol = "BTC";
-        System.out.println(ToSymbolConverter.convert(Currency));
-        Assert.assertSame(ToSymbolConverter.convert(Currency), symbol);
+        System.out.println(ToSymbolConverter.convert(currency));
+        Assert.assertSame(ToSymbolConverter.convert(currency), symbol);
     }
 
     @Test
     public void ToSymbolConverterTest2() {
-        String Currency = "euro";
+        String currency = "euro";
         String symbol = "EUR";
-        System.out.println(ToSymbolConverter.convert(Currency));
-        Assert.assertSame(ToSymbolConverter.convert(Currency), symbol);
+        System.out.println(ToSymbolConverter.convert(currency));
+        Assert.assertSame(ToSymbolConverter.convert(currency), symbol);
     }
 
     @Test
     public void ToSymbolConverterTest3() {
-        String Currency = "nulltest";
-        System.out.println(ToSymbolConverter.convert(Currency));
-        Assert.assertNull(ToSymbolConverter.convert(Currency));
+        String currency = "nulltest";
+        System.out.println(ToSymbolConverter.convert(currency));
+        Assert.assertNull(ToSymbolConverter.convert(currency));
     }
 }
 

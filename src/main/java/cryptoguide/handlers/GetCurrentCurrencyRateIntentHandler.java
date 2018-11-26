@@ -27,10 +27,10 @@ public class GetCurrentCurrencyRateIntentHandler implements RequestHandler {
         Map<String, Slot> slots = intent.getSlots();
 
         // Get our two currencies
-        Slot primaryCurrency = slots.get("primaryCurrency");
-        Slot secondaryCurrency = slots.get("secondaryCurrency");
-        String primarySymbol = ToSymbolConverter.convert(primaryCurrency.getValue().toLowerCase());
-        String secondarySymbol = ToSymbolConverter.convert(secondaryCurrency.getValue().toLowerCase());
+        String primaryCurrency = slots.get("primaryCurrency").getValue();
+        String secondaryCurrency = slots.get("secondaryCurrency").getValue();
+        String primarySymbol = ToSymbolConverter.convert(primaryCurrency.toLowerCase());
+        String secondarySymbol = ToSymbolConverter.convert(secondaryCurrency.toLowerCase());
         String speechText = AlexaTexts.GCCRI_SP_ERROR;
 
         if (primarySymbol == null || secondarySymbol == null) {
@@ -42,7 +42,9 @@ public class GetCurrentCurrencyRateIntentHandler implements RequestHandler {
 
         float  rate = CryptoCurrencyRateRetriever.getCurrentRate(primarySymbol, secondarySymbol);
         if (rate != 0.0f) {
-            speechText = "Der aktuelle Kurs von " + primarySymbol +  "zu" +  secondarySymbol + "ist 1 zu " + rate;
+            String rateString = String.valueOf(rate);
+            rateString.replace(".",",");
+            speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
         }
 
         return input.getResponseBuilder()
