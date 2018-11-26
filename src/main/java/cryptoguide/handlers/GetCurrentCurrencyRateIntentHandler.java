@@ -15,7 +15,7 @@ import static com.amazon.ask.request.Predicates.intentName;
 public class GetCurrentCurrencyRateIntentHandler implements RequestHandler {
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("GetCurrencyIntent"));
+        return input.matches(intentName("GetCurrentCurrencyRateIntent"));
     }
 
     @Override
@@ -35,8 +35,8 @@ public class GetCurrentCurrencyRateIntentHandler implements RequestHandler {
 
         if (primarySymbol == null || secondarySymbol == null) {
             return input.getResponseBuilder()
-                    .withSimpleCard("Waehrung ungueltig", AlexaTexts.GCCRI_SC_ERROR)
-                    .withSpeech(speechText)
+                    .withSimpleCard("Währung ungültig", AlexaTexts.GCCRI_SP_SC_ERROR)
+                    .withSpeech(AlexaTexts.GCCRI_SP_SC_ERROR)
                     .build();
         }
 

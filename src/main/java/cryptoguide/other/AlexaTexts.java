@@ -30,8 +30,8 @@ public class AlexaTexts {
 
     //GetCurrentCurrencyRateIntentHandler
     public static final String GCCRI_SP_ERROR = "Es gab einen Fehler bei der Anfrage. Bitte versuche es erneut.";
-    public static final String GCCRI_SC_ERROR = "Diese Waehrung unterstuetze ich leider nicht oder ich habe dich nicht richtig verstanden." +
-            "Bitte versuche es erneut.";
+    public static final String GCCRI_SP_SC_ERROR = "Diese Währung unterstütze ich leider noch nicht oder ich habe dich nicht richtig verstanden. Bitte versuche es erneut.";
+
     public static final String GCCRI_CTH = "Aktueller Kurs";
 
 

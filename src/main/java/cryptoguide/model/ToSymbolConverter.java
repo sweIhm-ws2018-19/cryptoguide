@@ -11,7 +11,7 @@ public class ToSymbolConverter {
 
     private static final HashMap<String, String> currencyMap = new HashMap<>();
 
-    static{
+    static {
         currencyMap.put("Bitcoin", "BTC");
         currencyMap.put("XRP", "XRP");
         currencyMap.put("Ethereum", "ETH");
