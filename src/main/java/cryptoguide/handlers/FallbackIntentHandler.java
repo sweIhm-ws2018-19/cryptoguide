@@ -25,6 +25,7 @@ public class FallbackIntentHandler implements RequestHandler {
                 .withSpeech(AlexaTexts.FBI_SP)
                 .withSimpleCard(AlexaTexts.FBI_CTH, AlexaTexts.FBI_CTT)
                 .withReprompt(AlexaTexts.FBI_SP)
+                .withShouldEndSession(false)
                 .build();
     }
 

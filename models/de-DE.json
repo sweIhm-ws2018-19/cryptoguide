@@ -34,6 +34,54 @@
           ]
         },
         {
+          "name": "GetHelpRatesIntent",
+          "samples": [
+            "Hilfe zu Kursen",
+            "Ich brauche Hilfe zu den Kursen",
+            "Ich brauche Hilfe zu Kursen",
+            "Hilfe Kurse",
+            "Hilf mir mit Kursen",
+            "Hilf mir mit den Kursen",
+            "Wie kann ich Kurse abfragen",
+            "Wie kann ich die Kurse abfragen"
+          ]
+        },
+        {
+          "name": "GetHelpPortfolioIntent",
+          "samples": [
+            "Hilfe zu Portfolio",
+            "Hilfe zum Portfoliio",
+            "Ich brauche Hilfe zum Portfolio",
+            "Ich brauche Hilfe zu Portfolio",
+            "Ich brauche Hilfe mit dem Portfolio",
+            "Hilfe Portfolio",
+            "Hilf mir mit dem Portfolio",
+            "Hilf mir mit meinem Portfolio",
+            "Was kann ich mit dem Portfolio tun",
+            "Was kann das Portfolio",
+            "Wie funktioniert das Portfolio"
+          ]
+        },
+        {
+          "name": "GetCurrencyCodeIntent",
+          "slots": [
+            {
+              "name": "currency",
+              "type": "LIST_OF_CURRENCIES"
+            }
+          ],
+          "samples": [
+            "Was ist Währungscode von {currency}",
+            "Was ist der Währungscode zu {currency}",
+            "Wie lautet der Währungscode zu {currency}",
+            "Wie lautet der Währungscode von {currency}",
+            "Währungscode von {currency}",
+            "Währungscode {currency}",
+            "Kürzel von {currency}",
+            "Was ist das Kürzel von {currency}"
+          ]
+        },
+        {
           "name": "GetCurrentCurrencyRateIntent",
           "slots": [
             {

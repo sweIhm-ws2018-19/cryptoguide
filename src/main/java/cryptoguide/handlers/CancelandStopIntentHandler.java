@@ -23,6 +23,7 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.intentName;
 
 public class CancelandStopIntentHandler implements RequestHandler {
+
     @Override
     public boolean canHandle(HandlerInput input) {
         return input.matches(intentName("AMAZON.StopIntent").or(intentName("AMAZON.CancelIntent")));
@@ -33,6 +34,7 @@ public class CancelandStopIntentHandler implements RequestHandler {
         return input.getResponseBuilder()
                 .withSpeech(AlexaTexts.CSI_SP)
                 .withSimpleCard(AlexaTexts.CSI_CTH, AlexaTexts.CSI_CTT)
+                .withShouldEndSession(true)
                 .build();
     }
 }

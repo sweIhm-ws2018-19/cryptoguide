@@ -32,9 +32,10 @@ public class LaunchRequestHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         return input.getResponseBuilder()
-                .withSimpleCard(AlexaTexts.LRM_CTH, AlexaTexts.LRM_SP)
-                .withSpeech(AlexaTexts.LRM_SP)
-                .withReprompt(AlexaTexts.LRM_RP)
+                .withSimpleCard(AlexaTexts.LR_CTH, AlexaTexts.LR_SP)
+                .withSpeech(AlexaTexts.LR_SP)
+                .withReprompt(AlexaTexts.LR_RP)
+                .withShouldEndSession(false)
                 .build();
     }
 }

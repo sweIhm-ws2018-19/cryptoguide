@@ -20,15 +20,15 @@ public class CryptoCurrencyRateRetriever {
     private static final String CURRENT_RATE_REQUEST = "https://min-api.cryptocompare.com/data/price?";
     private static final Logger logger = Logger.getLogger(CryptoCurrencyRateRetriever.class.getName());
 
-    public static float getCurrentRate(String primaryCurrency, String secondaryCurrency) {
-        float value = 0.0f;
+    public static double getCurrentRate(String primaryCurrency, String secondaryCurrency) {
+        double value = 0.0;
         try {
             HttpsURLConnection getRateConnection = (HttpsURLConnection) new URL(CURRENT_RATE_REQUEST + "fsym=" + primaryCurrency + "&tsyms=" + secondaryCurrency).openConnection();
             getRateConnection.setRequestMethod("GET");
             InputStreamReader rateReader = new InputStreamReader(getRateConnection.getInputStream());
             JsonObject jsonResponse = Json.parse(rateReader).asObject();
             if (jsonResponse.get(secondaryCurrency) != null) {
-                value = jsonResponse.get(secondaryCurrency).asFloat();
+                value = jsonResponse.get(secondaryCurrency).asDouble();
             }
 
         } catch (IOException e) {
