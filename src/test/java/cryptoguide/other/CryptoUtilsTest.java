@@ -22,13 +22,13 @@ public class CryptoUtilsTest {
     public void doubleToSpeechDecimal() {
         double test = 1.456;
         String res = CryptoUtils.doubleToSpeech(test, 3);
-        Assert.assertEquals("1,456", res);
+        Assert.assertEquals("1.456", res);
     }
 
     @Test
     public void doubleToSpeechAdditionalDecimal() {
         double test = 1.456;
         String res = CryptoUtils.doubleToSpeech(test, 14);
-        Assert.assertEquals("1,456", res);
+        Assert.assertEquals("1.456", res);
     }
 }
