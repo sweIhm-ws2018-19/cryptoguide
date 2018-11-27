@@ -8,7 +8,6 @@ import cryptoguide.model.ToSymbolConverter;
 import cryptoguide.other.AlexaTexts;
 import cryptoguide.other.CryptoUtils;
 
-import java.text.DecimalFormat;
 import java.util.Map;
 import java.util.Optional;
 
