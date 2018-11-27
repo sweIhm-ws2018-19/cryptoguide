@@ -29,7 +29,7 @@ public class AlexaTexts {
     public static final String HI_CTH = "Hilfe";
 
     //GetHelpRatesIntentHandler GHRI
-    public static final String GHRI_SP = "";
+    public static final String GHRI_SP = "Um aktuelle Kurse von Währungen zu erfahren sage zum Beispiel 'Wie ist der aktuelle Kurs von Euro zu Bitcoin', um Währungsabkürzungen zu erfahren sage zum Beispiel 'Was ist der Währungscode zu Dollar'";
     public static final String GHRI_CTH = "Hilfe zu Kursen";
 
     //GetHelpPortfolioIntentHandler GHPI
