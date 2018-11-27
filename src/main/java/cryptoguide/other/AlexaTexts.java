@@ -5,7 +5,6 @@ public class AlexaTexts {
     private AlexaTexts() {
         throw new IllegalStateException("Utility class");
     }
-
     //SP = SPEECH; RP = REPROMPT; CTH = CARDTEXT_HEADER; CTT = CARDTEXT_TEXT
 
     //LaunchRequestHandler LR
