@@ -7,6 +7,7 @@ import cryptoguide.model.CryptoCurrencyRateRetriever;
 import cryptoguide.model.ToSymbolConverter;
 import cryptoguide.other.AlexaTexts;
 
+import java.text.DecimalFormat;
 import java.util.Map;
 import java.util.Optional;
 
@@ -40,10 +41,16 @@ public class GetCurrentCurrencyRateIntentHandler implements RequestHandler {
                     .build();
         }
 
-        float  rate = CryptoCurrencyRateRetriever.getCurrentRate(primarySymbol, secondarySymbol);
+        float rate = CryptoCurrencyRateRetriever.getCurrentRate(primarySymbol, secondarySymbol);
         if (rate != 0.0f) {
-            String rateString = String.valueOf(rate);
-            rateString.replace(".",",");
+            String rateString;
+            DecimalFormat tenformat = new DecimalFormat("#.##########");
+            DecimalFormat twoformat = new DecimalFormat("#.##");
+            if(rate < 1.0f) {
+                rateString = tenformat.format(rate);
+            } else {
+                rateString = twoformat.format(rate);
+            }
             speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
         }
 

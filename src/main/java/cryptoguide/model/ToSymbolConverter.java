@@ -28,6 +28,6 @@ public class ToSymbolConverter {
     }
 
     public static String convert(String currency) {
-        return currencyMap.get(currency);
+        return currencyMap.get(currency.toLowerCase());
     }
 }
