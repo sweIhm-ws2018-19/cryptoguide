@@ -6,13 +6,7 @@
         {
           "name": "AMAZON.CancelIntent",
           "samples": [
-            "Beenden",
-            "Stop",
-            "Ende",
-            "Beende das Programm",
-            "Schließe das Programm",
-            "Schließe Crypto guide",
-            "Beende crypto guide"
+            "Abbrechen"
           ]
         },
         {
