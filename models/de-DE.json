@@ -70,7 +70,7 @@
           "name": "GetHelpPortfolioIntent",
           "samples": [
             "Hilfe zu Portfolio",
-            "Hilfe zum Portfoliio",
+            "Hilfe zum Portfolio",
             "Ich brauche Hilfe zum Portfolio",
             "Ich brauche Hilfe zu Portfolio",
             "Ich brauche Hilfe mit dem Portfolio",
