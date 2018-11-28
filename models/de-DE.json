@@ -6,31 +6,51 @@
         {
           "name": "AMAZON.CancelIntent",
           "samples": [
-            "Beenden"
+            "Beenden",
+            "Stop",
+            "Ende",
+            "Beende das Programm",
+            "Schließe das Programm",
+            "Schließe Crypto guide",
+            "Beende crypto guide"
           ]
         },
         {
           "name": "AMAZON.HelpIntent",
           "samples": [
-            "Hilfe"
+            "Hilfe",
+            "Ich brauche Hilfe",
+            "Ich brauche allgemeine Hilfe",
+            "Hilf mir",
+            "Wie benutze ich dieses Programm",
+            "Wie funktioniert das Programm"
           ]
         },
         {
           "name": "AMAZON.StopIntent",
           "samples": [
-            "Beenden"
+            "Beenden",
+            "Stop",
+            "Ende",
+            "Beende das Programm",
+            "Schließe das Programm",
+            "Schließe Crypto guide",
+            "Beende crypto guide"
           ]
         },
         {
           "name": "AMAZON.PauseIntent",
           "samples": [
-            "Pause"
+            "Pause",
+            "Halt",
+            "pausieren"
           ]
         },
         {
           "name": "AMAZON.ResumeIntent",
           "samples": [
-            "Weiter"
+            "Weiter",
+            "Fortfahren"
           ]
         },
         {
