@@ -4,7 +4,7 @@
   <groupId>cryptoguide</groupId>
   <artifactId>CryptoGuide</artifactId>
   <packaging>jar</packaging>
-  <version>1.0</version>
+  <version>2.0</version>
   <name>CryptoGuide</name>
   <url>http://developer.amazon.com/ask</url>
   <licenses>

@@ -10,6 +10,9 @@ import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/**
+ * This class provides the skill with crytocurrencyrates retrieved from cryptocompare.com
+ */
 public class CryptoCurrencyRateRetriever {
 
     // This is a static class so we need a private constructor to hide the standard public one.

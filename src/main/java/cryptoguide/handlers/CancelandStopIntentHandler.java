@@ -22,6 +22,9 @@ import java.util.Optional;
 
 import static com.amazon.ask.request.Predicates.intentName;
 
+/**
+ * This handler is triggered when the user wants to quit CryptoGuide.
+ */
 public class CancelandStopIntentHandler implements RequestHandler {
 
     @Override

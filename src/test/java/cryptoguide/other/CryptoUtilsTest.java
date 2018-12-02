@@ -18,6 +18,9 @@ public class CryptoUtilsTest {
         Assert.assertEquals("1", res);
     }
 
+    /**
+     * commas must be changed to dots when commiting to github, for maven builds use commas. 1,456 -> 1.456
+     */
     @Test
     public void doubleToSpeechDecimal() {
         double test = 1.456;

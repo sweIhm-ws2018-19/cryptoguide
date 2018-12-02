@@ -2,6 +2,9 @@ package cryptoguide.model;
 
 import java.util.HashMap;
 
+/**
+ * This class provides a map with currencies to their equivalent currency codes.
+ */
 public class ToSymbolConverter {
 
     // This is a static class so we need a private constructor to hide the standard public one.
