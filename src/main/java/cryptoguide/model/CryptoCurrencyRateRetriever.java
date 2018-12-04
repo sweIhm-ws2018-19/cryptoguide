@@ -50,7 +50,7 @@ public class CryptoCurrencyRateRetriever {
         } else {
             double value = 0.0;
             try {
-                HttpsURLConnection getRateConnection = (HttpsURLConnection) new URL(PAST_RATE_REQUEST + "fsym=" + primaryCurrency + "&tsyms=" + secondaryCurrency + "&ts=" + timestamp).openConnection();
+                HttpsURLConnection getRateConnection = (HttpsURLConnection) new URL(PAST_RATE_REQUEST + "fsym=" + primaryCurrency + "&tsyms=" + secondaryCurrency + "&ts=" + timestamp + "&calculationType=Close").openConnection();
                 getRateConnection.setRequestMethod("GET");
                 InputStreamReader rateReader = new InputStreamReader(getRateConnection.getInputStream());
                 JsonObject jsonResponse = Json.parse(rateReader).asObject();

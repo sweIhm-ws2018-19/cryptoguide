@@ -119,6 +119,26 @@
             "Kurs von {primaryCurrency} in {secondaryCurrency}",
             "Kurs von {primaryCurrency} zu {secondaryCurrency}"
           ]
+        },
+        {
+          "name": "GetPastCurrencyRateIntent",
+          "slots": [
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "secondaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "rateDate",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "Wie war der Kurs von {primaryCurrency} zu {secondaryCurrency} am {rateDate}"
+          ]
         }
       ],
       "types": [
