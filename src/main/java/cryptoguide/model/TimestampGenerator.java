@@ -35,13 +35,13 @@ public class TimestampGenerator {
         } else if(inputLength == 10) {
             if (input.endsWith("XX")) {
                 //Calculate the date of the first
-                input.replace("XX", "01");
+                input = input.replace("XX", "01");
             }
         }
         return getTimeStampForDateString(input);
     }
 
-    protected static long getTimeStampForDateString(String dateString) {
+    static long getTimeStampForDateString(String dateString) {
         if(dateString.length() == 10) {
             //dateString has schema 2016-04-17
             int year = Integer.valueOf(dateString.substring(0,4));
@@ -53,7 +53,7 @@ public class TimestampGenerator {
         return -1;
     }
 
-    public static long getCurrentTimeStamp() {
+    static long getCurrentTimeStamp() {
         return Instant.now().getEpochSecond();
     }
 }
