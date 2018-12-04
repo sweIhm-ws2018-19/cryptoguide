@@ -45,5 +45,9 @@ public class AlexaTexts {
     public static final String GCCRI_CTH = "Aktueller Kurs";
     public static final String GCCRI_CTH_ERROR = "Unbekannter Kurs";
 
-
+    //GetPastCurrencyRateIntentHandler
+    public static final String GPCRI_SP_ERROR = "Es gab einen Fehler bei der Anfrage. Bitte versuche es erneut.";
+    public static final String GPCRI_SP_SC_ERROR = "Diese Währung unterstütze ich leider noch nicht oder ich habe dich nicht richtig verstanden. Bitte versuche es erneut.";
+    public static final String GPCRI_CTH = "Vergangener Kurs";
+    public static final String GPCRI_CTH_ERROR = "Unbekannter Kurs";
 }
