@@ -30,8 +30,7 @@ public class CryptoGuideStreamHandler extends SkillStreamHandler {
                         new FallbackIntentHandler(),
                         new GetHelpRatesIntentHandler(),
                         new GetHelpPortfolioIntentHandler(),
-                        new GetCurrentCurrencyRateIntentHandler(),
-                        new GetPastCurrencyRateIntentHandler(),
+                        new GetCurrencyRateIntentHandler(),
                         new GetCurrencyCodeIntentHandler())
                 .withSkillId("amzn1.ask.skill.e8f22f70-b411-48f8-af42-aac285687fa8")
                 .build();

@@ -39,15 +39,10 @@ public class AlexaTexts {
     public static final String GCCI_SP_ERROR = "Diese Währung unterstütze ich leider noch nicht oder ich habe dich nicht richtig verstanden. Bitte versuche es erneut.";
     public static final String GCCI_CTH = "Währungscode";
 
-    //GetCurrentCurrencyRateIntentHandler
-    public static final String GCCRI_SP_ERROR = "Es gab einen Fehler bei der Anfrage. Bitte versuche es erneut.";
-    public static final String GCCRI_SP_SC_ERROR = "Diese Währung unterstütze ich leider noch nicht oder ich habe dich nicht richtig verstanden. Bitte versuche es erneut.";
-    public static final String GCCRI_CTH = "Aktueller Kurs";
-    public static final String GCCRI_CTH_ERROR = "Unbekannter Kurs";
-
-    //GetPastCurrencyRateIntentHandler
-    public static final String GPCRI_SP_ERROR = "Ich konnte das leider nicht für dich herausfinden. Wahrscheinlich leigen mir dazu keine Daten vor versuche es am besten nochmal mit anderen Daten";
-    public static final String GPCRI_SP_SC_ERROR = "Diese Währung unterstütze ich leider noch nicht oder ich habe dich nicht richtig verstanden. Bitte versuche es erneut.";
-    public static final String GPCRI_CTH = "Vergangener Kurs";
-    public static final String GPCRI_CTH_ERROR = "Unbekannter Kurs";
+    //GetCurrencyRateIntentHandler GCRI
+    public static final String GCRI_SP_ERROR_INVALID_CURRENCY = "Ich habe eine der beiden Währungen nicht verstanden oder unterstütze diese noch nicht.";
+    public static final String GCRI_SP_ERROR_CRYPTOCOMPARE = "Ich habe einen Fehler beim Ermitteln des Kurses festgestellt. Versuche es noch einmal.";
+    public static final String GCRI_SP_ERROR_WRONGDATE = "Eine Berechnung des Kurses zum angegebenen Zeitpunkt ist nicht möglich.";
+    public static final String GCRI_CTH = "Ermittelter Kurs";
+    public static final String GCRI_CTH_ERROR = "Fehler";
 }
