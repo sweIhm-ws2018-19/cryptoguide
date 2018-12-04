@@ -143,45 +143,6 @@
             "Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}",
             "Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}"
           ]
-        },
-        {
-          "name": "GetPastCurrencyRateIntent",
-          "slots": [
-            {
-              "name": "primaryCurrency",
-              "type": "LIST_OF_CURRENCIES"
-            },
-            {
-              "name": "secondaryCurrency",
-              "type": "LIST_OF_CURRENCIES"
-            },
-            {
-              "name": "rateDate",
-              "type": "AMAZON.DATE"
-            }
-          ],
-          "samples": [
-            "Wie war der Kurs von {primaryCurrency} zu {secondaryCurrency} am {rateDate}",
-            "Wie war der Kurs von {primaryCurrency} zu {secondaryCurrency} {rateDate}",
-            "Wie war am {rateDate} der Kurs von {primaryCurrency} zu {secondaryCurrency} ",
-            "Was war {rateDate} der Kurs von {primaryCurrency} zu {secondaryCurrency} ",
-            "Was war der Kurs von {primaryCurrency} zu {secondaryCurrency} am {rateDate}",
-            "Was war der Kurs von {primaryCurrency} zu {secondaryCurrency} {rateDate}",
-            "Was war am {rateDate} der Kurs von {primaryCurrency} zu {secondaryCurrency} ",
-            "Was war {rateDate} der Kurs von {primaryCurrency} zu {secondaryCurrency} ",
-            "Kurs von {primaryCurrency} zu {secondaryCurrency} am {rateDate}",
-            "Kurs von {primaryCurrency} zu {secondaryCurrency} am {rateDate}",
-            "Wie war der Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}",
-            "Wie war der Kurs von {primaryCurrency} in {secondaryCurrency} {rateDate}",
-            "Wie war am {rateDate} der Kurs von {primaryCurrency} in {secondaryCurrency} ",
-            "Was war {rateDate} der Kurs von {primaryCurrency} in {secondaryCurrency} ",
-            "Was war der Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}",
-            "Was war der Kurs von {primaryCurrency} in {secondaryCurrency} {rateDate}",
-            "Was war am {rateDate} der Kurs von {primaryCurrency} in {secondaryCurrency} ",
-            "Was war {rateDate} der Kurs von {primaryCurrency} in {secondaryCurrency} ",
-            "Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}",
-            "Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}"
-          ]
         }
       ],
       "types": [
