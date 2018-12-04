@@ -37,10 +37,10 @@ public class GetPastCurrencyRateIntentHandler implements RequestHandler {
 
         String primarySymbol = ToSymbolConverter.convert(primaryCurrency.toLowerCase());
         String secondarySymbol = ToSymbolConverter.convert(secondaryCurrency.toLowerCase());
-        Long date = TimestampGenerator.convertToTimeStamp(currentDate.toLowerCase());
+        Long timestamp = TimestampGenerator.convertToTimeStamp(currentDate);
         String speechText;
 
-        if (primarySymbol == null || secondarySymbol == null || date == null) {
+        if (primarySymbol == null || secondarySymbol == null || timestamp == -1) {
             return input.getResponseBuilder()
                     .withSimpleCard(AlexaTexts.GPCRI_CTH_ERROR, AlexaTexts.GPCRI_SP_SC_ERROR)
                     .withSpeech(AlexaTexts.GPCRI_SP_SC_ERROR)
@@ -48,7 +48,7 @@ public class GetPastCurrencyRateIntentHandler implements RequestHandler {
                     .build();
         }
 
-        double rate = CryptoCurrencyRateRetriever.getPastRate(primarySymbol, secondarySymbol, date);
+        double rate = CryptoCurrencyRateRetriever.getPastRate(primarySymbol, secondarySymbol, timestamp);
 
         if (rate != 0.0) {
             String rateString;
@@ -57,7 +57,7 @@ public class GetPastCurrencyRateIntentHandler implements RequestHandler {
             } else {
                 rateString = CryptoUtils.doubleToSpeech(rate, 3);
             }
-            speechText = "Der Kurs am " + date + "von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
+            speechText = "Der Kurs von" + primaryCurrency +  " zu " +  secondaryCurrency + " war 1 zu " + rateString;
         } else {
             return input.getResponseBuilder()
                     .withSimpleCard(AlexaTexts.GPCRI_CTH, AlexaTexts.GPCRI_SP_ERROR)

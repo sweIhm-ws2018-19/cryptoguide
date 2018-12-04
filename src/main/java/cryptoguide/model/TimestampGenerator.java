@@ -18,6 +18,7 @@ public class TimestampGenerator {
     }
 
     public static long convertToTimeStamp(String input) {
+        if (input == null) return -1;
         int inputLength = input.length();
         if((inputLength == 8 || inputLength == 7) && input.charAt(5) == 'W') {
             //Calculate the date of monday in this specific week
