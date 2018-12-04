@@ -57,10 +57,10 @@ public class GetPastCurrencyRateIntentHandler implements RequestHandler {
             } else {
                 rateString = CryptoUtils.doubleToSpeech(rate, 3);
             }
-            speechText = "Der Kurs von" + primaryCurrency +  " zu " +  secondaryCurrency + " war 1 zu " + rateString;
+            speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " war 1 zu " + rateString;
         } else {
             return input.getResponseBuilder()
-                    .withSimpleCard(AlexaTexts.GPCRI_CTH, AlexaTexts.GPCRI_SP_ERROR)
+                    .withSimpleCard(AlexaTexts.GPCRI_CTH_ERROR, AlexaTexts.GPCRI_SP_ERROR)
                     .withSpeech(AlexaTexts.GPCRI_SP_ERROR)
                     .withShouldEndSession(false)
                     .build();
