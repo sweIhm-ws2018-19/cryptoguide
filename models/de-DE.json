@@ -143,6 +143,48 @@
             "Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}",
             "Kurs von {primaryCurrency} in {secondaryCurrency} am {rateDate}"
           ]
+        },
+        {
+          "name": "ConvertCurrencyAmountIntent",
+          "slots": [
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "secondaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "amount",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Wie viel sind {amount} {primaryCurrency} in {secondaryCurrency} wert.",
+            "Wie viel sind {amount} {primaryCurrency} zurzeit in {secondaryCurrency} wert.",
+            "Wie viel sind {amount} {primaryCurrency} aktuell in {secondaryCurrency} wert.",
+            "Wie viel ist {amount} {primaryCurrency} zurzeit in {secondaryCurrency} wert.",
+            "Wie viel ist {amount} {primaryCurrency} aktuell in {secondaryCurrency} wert.",
+            "Wie viel ist {amount} {primaryCurrency} in {secondaryCurrency} wert",
+            "Wie viel {secondaryCurrency} bekomme ich für {amount} {primaryCurrency}",
+            "Wie viel {secondaryCurrency} bekomme ich für {amount} {primaryCurrency} aktuell",
+            "Wie viel {secondaryCurrency} bekomme ich aktuell für {amount} {primaryCurrency}",
+            "Wie viel {secondaryCurrency} kann ich für {amount} {primaryCurrency} kaufen",
+            "Wie viel {secondaryCurrency} muss ich für  {amount} {primaryCurrency} zahlen",
+            "Wie viel {secondaryCurrency} sind {amount} {primaryCurrency} wert",
+            "Wenn ich {amount} {primaryCurrency} verkaufe wie viel {secondaryCurrency} bekomme ich dafür",
+            "Was sind {amount} {primaryCurrency} in {secondaryCurrency} wert",
+            "Was ist der Wert von {amount} {primaryCurrency} in {secondaryCurrency}",
+            "{amount} {primaryCurrency} in {secondaryCurrency}",
+            "Wert von {amount} {primaryCurrency} in {secondaryCurrency}",
+            "Für wie viel {secondaryCurrency} bekomme ich für {amount} {primaryCurrency} aktuell",
+            "Wie viel {secondaryCurrency} kosten mich zurzeit {amount} {primaryCurrency}",
+            "Wie viel {secondaryCurrency} kosten zurzeit {amount} {primaryCurrency}",
+            "Für wie viel {secondaryCurrency} kann ich {amount} {primaryCurrency} verkaufen",
+            "Für wie viel {secondaryCurrency} kann ich {amount} {primaryCurrency} kaufen",
+            "Wie viel {secondaryCurrency} brauche ich um {amount} {primaryCurrency} zu kaufen"
+          ]
         }
       ],
       "types": [
