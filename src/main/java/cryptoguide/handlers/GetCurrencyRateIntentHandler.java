@@ -20,7 +20,7 @@ import static com.amazon.ask.request.Predicates.intentName;
 public class GetCurrencyRateIntentHandler implements RequestHandler {
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName("GetCurrencyRateIntent"));
+        return (input.matches(intentName("GetCurrencyRateIntent")) || input.matches(intentName("GetPastCurrencyRateIntent")) || input.matches(intentName("ConvertCurrencyAmountIntent")));
     }
 
     @Override
@@ -36,7 +36,6 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         String secondaryCurrency = slots.get("secondaryCurrency").getValue();
         String primarySymbol = ToSymbolConverter.convert(primaryCurrency.toLowerCase());
         String secondarySymbol = ToSymbolConverter.convert(secondaryCurrency.toLowerCase());
-        String rateDate = slots.get("rateDate").getValue();
 
         if (primarySymbol == null || secondarySymbol == null) {
             return input.getResponseBuilder()
@@ -46,13 +45,30 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
                     .build();
         }
 
-        String speechText;
-        double rate;
-        if(rateDate == null) {
+        String speechText = "";
+        double rate = 0.0;
+        int amount = 0;
+        if (input.matches(intentName("ConvertCurrencyAmountIntent")) || input.matches(intentName("GetCurrencyRateIntent"))) {
             //Aktuellen Kurs
             rate = CryptoCurrencyRateRetriever.getCurrentRate(primarySymbol, secondarySymbol);
-        } else {
+        }
+        if (input.matches(intentName("ConvertCurrencyAmountIntent"))) {
+            //Kurs mit Menge
+            String amountString = slots.get("amount").getValue();
+            amount = Integer.parseInt(amountString);
+            if (amount > 0) {
+                rate = rate * amount;
+            } else {
+                return input.getResponseBuilder()
+                        .withSimpleCard(AlexaTexts.GCRI_CTH_ERROR, AlexaTexts.GCRI_SP_ERROR_AMOUNT_TOO_SMALL)
+                        .withSpeech(AlexaTexts.GCRI_SP_ERROR_AMOUNT_TOO_SMALL)
+                        .withShouldEndSession(false)
+                        .build();
+            }
+        }
+        if (input.matches(intentName("GetPastCurrencyRateIntent"))) {
             //Vergangenen Kurs
+            String rateDate = slots.get("rateDate").getValue();
             long timestamp = TimestampGenerator.convertToTimeStamp(rateDate);
             if(timestamp != -1) {
                 rate = CryptoCurrencyRateRetriever.getPastRate(primarySymbol, secondarySymbol, timestamp);
@@ -72,7 +88,15 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
             } else {
                 rateString = CryptoUtils.doubleToSpeech(rate, 3);
             }
-            speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
+            if (input.matches(intentName("GetCurrencyRateIntent"))) {
+                speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
+            }
+            if (input.matches(intentName("ConvertCurrencyAmountIntent"))) {
+                speechText = amount + " " + primaryCurrency + "ist zurzeit" + rateString + secondaryCurrency +  " wert.";
+            }
+            if (input.matches(intentName("GetPastCurrencyRateIntent"))) {
+                speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " in der Vergangenheit war 1 zu " + rateString;
+            }
         } else {
             return input.getResponseBuilder()
                     .withSimpleCard(AlexaTexts.GCRI_CTH_ERROR, AlexaTexts.GCRI_SP_ERROR_CRYPTOCOMPARE)
