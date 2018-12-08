@@ -18,9 +18,14 @@ import static com.amazon.ask.request.Predicates.intentName;
  * This handler is triggered when the user wants to know the current currencyrate of two specific currencies
  */
 public class GetCurrencyRateIntentHandler implements RequestHandler {
+
+    private static final String GET_CURRENCY_RATE_INTENT = "GetCurrencyRateIntent";
+    private static final String GET_PAST_CURRENCY_RATE_INTENT = "GetPastCurrencyRateIntent";
+    private static final String CONVERT_CURRENCY_AMOUNT_INTENT = "ConvertCurrencyAmountIntent";
+
     @Override
     public boolean canHandle(HandlerInput input) {
-        return (input.matches(intentName("GetCurrencyRateIntent")) || input.matches(intentName("GetPastCurrencyRateIntent")) || input.matches(intentName("ConvertCurrencyAmountIntent")));
+        return (input.matches(intentName(GET_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT)) || input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT)));
     }
 
     @Override
@@ -48,11 +53,11 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         String speechText = "";
         double rate = 0.0;
         int amount = 0;
-        if (input.matches(intentName("ConvertCurrencyAmountIntent")) || input.matches(intentName("GetCurrencyRateIntent"))) {
+        if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT)) || input.matches(intentName(GET_CURRENCY_RATE_INTENT))) {
             //Aktuellen Kurs
             rate = CryptoCurrencyRateRetriever.getCurrentRate(primarySymbol, secondarySymbol);
         }
-        if (input.matches(intentName("ConvertCurrencyAmountIntent"))) {
+        if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT))) {
             //Kurs mit Menge
             String amountString = slots.get("amount").getValue();
             amount = Integer.parseInt(amountString);
@@ -66,7 +71,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
                         .build();
             }
         }
-        if (input.matches(intentName("GetPastCurrencyRateIntent"))) {
+        if (input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT))) {
             //Vergangenen Kurs
             String rateDate = slots.get("rateDate").getValue();
             long timestamp = TimestampGenerator.convertToTimeStamp(rateDate);
@@ -88,13 +93,13 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
             } else {
                 rateString = CryptoUtils.doubleToSpeech(rate, 3);
             }
-            if (input.matches(intentName("GetCurrencyRateIntent"))) {
+            if (input.matches(intentName(GET_CURRENCY_RATE_INTENT))) {
                 speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
             }
-            if (input.matches(intentName("ConvertCurrencyAmountIntent"))) {
+            if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT))) {
                 speechText = amount + " " + primaryCurrency + "ist zurzeit" + rateString + secondaryCurrency +  " wert.";
             }
-            if (input.matches(intentName("GetPastCurrencyRateIntent"))) {
+            if (input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT))) {
                 speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " in der Vergangenheit war 1 zu " + rateString;
             }
         } else {
