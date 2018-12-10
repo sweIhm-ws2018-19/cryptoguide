@@ -115,10 +115,14 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
             speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
         }
         if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT))) {
-            speechText = amount + " " + primaryCurrency + "ist zurzeit" + rateString + secondaryCurrency +  " wert.";
+            if(amount == 1) {
+                speechText = amount + " " + primaryCurrency + "ist zurzeit " + rateString + secondaryCurrency +  " wert.";
+            } else {
+                speechText = amount + " " + primaryCurrency + "sind zurzeit " + rateString + secondaryCurrency +  " wert.";
+            }
         }
         if (input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT))) {
-            speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " in der Vergangenheit war 1 zu " + rateString;
+            speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " war 1 zu " + rateString;
         }
         return speechText;
     }
