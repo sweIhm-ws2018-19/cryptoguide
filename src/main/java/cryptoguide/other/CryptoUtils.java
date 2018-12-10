@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 public class CryptoUtils {
 
-    CryptoUtils() throws IllegalStateException {
+    CryptoUtils() {
         throw new IllegalStateException("Utility class");
     }
 
