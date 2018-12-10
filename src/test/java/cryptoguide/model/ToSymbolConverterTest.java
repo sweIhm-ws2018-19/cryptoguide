@@ -5,6 +5,11 @@ import org.junit.Test;
 
 public class ToSymbolConverterTest {
 
+    @Test(expected =  IllegalStateException.class)
+    public void constructorTest() {
+        ToSymbolConverter converter = new ToSymbolConverter();
+    }
+
     @Test
     public void ToSymbolConverterTest1() {
         String currency = "bitcoin";

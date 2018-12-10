@@ -13,7 +13,7 @@ import java.time.temporal.TemporalAdjusters;
  */
 public class TimestampGenerator {
 
-    private TimestampGenerator() {
+    TimestampGenerator() throws IllegalStateException {
         throw new IllegalStateException("This is a static class, can't create a instance.");
     }
 

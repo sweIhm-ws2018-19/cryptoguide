@@ -4,7 +4,9 @@ import java.text.DecimalFormat;
 
 public class CryptoUtils {
 
-    private CryptoUtils() { throw new IllegalStateException("Utility class"); }
+    CryptoUtils() throws IllegalStateException {
+        throw new IllegalStateException("Utility class");
+    }
 
     public static String doubleToSpeech(double db, int decimal) {
         if(decimal < 0) {
