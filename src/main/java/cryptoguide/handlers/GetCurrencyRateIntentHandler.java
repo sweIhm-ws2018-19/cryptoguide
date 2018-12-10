@@ -50,7 +50,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
                     .build();
         }
 
-        String speechText = "";
+        String speechText;
         double rate = 0.0;
         int amount = 0;
         if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT)) || input.matches(intentName(GET_CURRENCY_RATE_INTENT))) {
@@ -87,21 +87,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         }
 
         if(rate != 0.0) {
-            String rateString;
-            if(rate < 1.0) {
-                rateString = CryptoUtils.doubleToSpeech(rate, 8);
-            } else {
-                rateString = CryptoUtils.doubleToSpeech(rate, 3);
-            }
-            if (input.matches(intentName(GET_CURRENCY_RATE_INTENT))) {
-                speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
-            }
-            if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT))) {
-                speechText = amount + " " + primaryCurrency + "ist zurzeit" + rateString + secondaryCurrency +  " wert.";
-            }
-            if (input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT))) {
-                speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " in der Vergangenheit war 1 zu " + rateString;
-            }
+            speechText = createSpeechText(input, rate, primaryCurrency, secondaryCurrency, amount);
         } else {
             return input.getResponseBuilder()
                     .withSimpleCard(AlexaTexts.GCRI_CTH_ERROR, AlexaTexts.GCRI_SP_ERROR_CRYPTOCOMPARE)
@@ -115,5 +101,25 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
                 .withSpeech(speechText)
                 .withShouldEndSession(false)
                 .build();
+    }
+
+    private String createSpeechText(HandlerInput input, double rate, String primaryCurrency, String secondaryCurrency, int amount) {
+        String rateString;
+        String speechText = "";
+        if(rate < 1.0) {
+            rateString = CryptoUtils.doubleToSpeech(rate, 8);
+        } else {
+            rateString = CryptoUtils.doubleToSpeech(rate, 3);
+        }
+        if (input.matches(intentName(GET_CURRENCY_RATE_INTENT))) {
+            speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
+        }
+        if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT))) {
+            speechText = amount + " " + primaryCurrency + "ist zurzeit" + rateString + secondaryCurrency +  " wert.";
+        }
+        if (input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT))) {
+            speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " in der Vergangenheit war 1 zu " + rateString;
+        }
+        return speechText;
     }
 }
