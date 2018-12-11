@@ -111,23 +111,48 @@
           "name": "GetCurrencyCodeIntent",
           "slots": [
             {
-              "name": "currency",
+              "name": "primaryCurrency",
               "type": "LIST_OF_CURRENCIES"
             }
           ],
           "samples": [
-            "Was ist Währungscode von {currency}",
-            "Was ist der Währungscode zu {currency}",
-            "Wie lautet der Währungscode zu {currency}",
-            "Wie lautet der Währungscode von {currency}",
-            "Währungscode von {currency}",
-            "Währungscode {currency}",
-            "Kürzel von {currency}",
-            "Was ist das Kürzel von {currency}"
+            "Was ist Währungscode von {primaryCurrency}",
+            "Was ist der Währungscode zu {primaryCurrency}",
+            "Wie lautet der Währungscode zu {primaryCurrency}",
+            "Wie lautet der Währungscode von {primaryCurrency}",
+            "Währungscode von {primaryCurrency}",
+            "Währungscode {primaryCurrency}",
+            "Kürzel von {primaryCurrency}",
+            "Was ist das Kürzel von {primaryCurrency}"
           ]
         },
         {
           "name": "GetCurrencyRateIntent",
+          "slots": [
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "secondaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            }
+          ],
+          "samples": [
+            "Wie ist der aktuelle Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Wie ist der aktuelle Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Was ist der aktuelle Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Was ist der aktuelle Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Wie ist der Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Wie ist der Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Was ist der Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Was ist der Kurs von {primaryCurrency} zu {secondaryCurrency}",
+            "Kurs von {primaryCurrency} in {secondaryCurrency}",
+            "Kurs von {primaryCurrency} zu {secondaryCurrency}"
+          ]
+        },
+        {
+          "name": "GetPastCurrencyRateIntent",
           "slots": [
             {
               "name": "primaryCurrency",
@@ -143,16 +168,6 @@
             }
           ],
           "samples": [
-            "Wie ist der aktuelle Kurs von {primaryCurrency} in {secondaryCurrency}",
-            "Wie ist der aktuelle Kurs von {primaryCurrency} zu {secondaryCurrency}",
-            "Was ist der aktuelle Kurs von {primaryCurrency} in {secondaryCurrency}",
-            "Was ist der aktuelle Kurs von {primaryCurrency} zu {secondaryCurrency}",
-            "Wie ist der Kurs von {primaryCurrency} in {secondaryCurrency}",
-            "Wie ist der Kurs von {primaryCurrency} zu {secondaryCurrency}",
-            "Was ist der Kurs von {primaryCurrency} in {secondaryCurrency}",
-            "Was ist der Kurs von {primaryCurrency} zu {secondaryCurrency}",
-            "Kurs von {primaryCurrency} in {secondaryCurrency}",
-            "Kurs von {primaryCurrency} zu {secondaryCurrency}",
             "Wie war der Kurs von {primaryCurrency} zu {secondaryCurrency} am {rateDate}",
             "Wie war der Kurs von {primaryCurrency} zu {secondaryCurrency} {rateDate}",
             "Wie war am {rateDate} der Kurs von {primaryCurrency} zu {secondaryCurrency} ",

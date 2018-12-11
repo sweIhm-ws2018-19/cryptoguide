@@ -2,7 +2,7 @@ package cryptoguide.other;
 
 public class AlexaTexts {
 
-    private AlexaTexts() {
+    AlexaTexts() {
         throw new IllegalStateException("Utility class");
     }
     //SP = SPEECH; RP = REPROMPT; CTH = CARDTEXT_HEADER; CTT = CARDTEXT_TEXT
@@ -43,6 +43,7 @@ public class AlexaTexts {
     public static final String GCRI_SP_ERROR_INVALID_CURRENCY = "Ich habe eine der beiden Währungen nicht verstanden oder unterstütze diese noch nicht.";
     public static final String GCRI_SP_ERROR_CRYPTOCOMPARE = "Ich habe einen Fehler beim Ermitteln des Kurses festgestellt. Versuche es noch einmal.";
     public static final String GCRI_SP_ERROR_WRONGDATE = "Eine Berechnung des Kurses zum angegebenen Zeitpunkt ist nicht möglich.";
+    public static final String GCRI_SP_ERROR_AMOUNT_TOO_SMALL = "Eine negative Menge oder null ist nicht zulässig. Versuche es noch einmal.";
     public static final String GCRI_CTH = "Ermittelter Kurs";
     public static final String GCRI_CTH_ERROR = "Fehler";
 }

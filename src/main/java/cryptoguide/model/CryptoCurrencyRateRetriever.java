@@ -16,7 +16,7 @@ import java.util.logging.Logger;
 public class CryptoCurrencyRateRetriever {
 
     // This is a static class so we need a private constructor to hide the standard public one.
-    private CryptoCurrencyRateRetriever() {
+    CryptoCurrencyRateRetriever() {
         throw new IllegalStateException("This is a static class, can't create a instance.");
     }
 

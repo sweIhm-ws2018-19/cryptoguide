@@ -5,6 +5,11 @@ import org.junit.Test;
 
 public class CryptoCurrencyRateRetrieverTest {
 
+    @Test(expected = IllegalStateException.class)
+    public void constructorTest() {
+        CryptoCurrencyRateRetriever retriever = new CryptoCurrencyRateRetriever();
+    }
+
     @Test
     public void GetCurrencyRateTest1() {
         String firstCurrency = "BTC";
@@ -70,6 +75,7 @@ public class CryptoCurrencyRateRetrieverTest {
         Assert.assertEquals(0.0f, test, 0.0f);
     }
 
+
     @Test
     public void GetPastRateTestFuture() {
         String firstCurrency = "BTC";
@@ -79,6 +85,7 @@ public class CryptoCurrencyRateRetrieverTest {
         double test_actual = CryptoCurrencyRateRetriever.getCurrentRate(firstCurrency, secondCurrency);
         Assert.assertEquals(test_actual, test, 0);
     }
+
 
     @Test
     public void GetPastRateTestPast() {
