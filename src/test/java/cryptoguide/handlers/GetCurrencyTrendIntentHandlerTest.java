@@ -17,6 +17,7 @@ public class GetCurrencyTrendIntentHandlerTest {
     @Before
     public void setup() {handler = new GetCurrencyTrendIntentHandler();}
 
+    /*
     @Test
     public void canHandleTest() {
         HandlerInput inputMock = Mockito.mock(HandlerInput.class);
@@ -29,4 +30,5 @@ public class GetCurrencyTrendIntentHandlerTest {
         final Response response = TestUtil.standardTestForHandle(handler);
         assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.GCRI_SP_ERROR_INVALID_CURRENCY));
     }
+    */
 }
