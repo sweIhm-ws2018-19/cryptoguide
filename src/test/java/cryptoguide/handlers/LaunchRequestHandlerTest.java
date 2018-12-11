@@ -1,8 +1,7 @@
-package cryptoguide.handler;
+package cryptoguide.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.model.Response;
-import cryptoguide.handlers.HelpIntentHandler;
 import cryptoguide.other.AlexaTexts;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,13 +11,13 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
-public class HelpIntentHandlerTest {
+public class LaunchRequestHandlerTest {
 
-    private HelpIntentHandler handler;
+    private LaunchRequestHandler handler;
 
     @Before
     public void setup() {
-        handler = new HelpIntentHandler();
+        handler = new LaunchRequestHandler();
     }
 
     @Test
@@ -31,6 +30,7 @@ public class HelpIntentHandlerTest {
     @Test
     public void handleTest1() {
         final Response response = TestUtil.standardTestForHandle(handler);
-        assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.HI_SP));
+        assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.LR_SP));
     }
+
 }

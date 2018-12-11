@@ -15,7 +15,7 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.intentName;
 
 /**
- * This handler is triggered when the user wants to know the current currencyrate of two specific currencies
+ * This handlers is triggered when the user wants to know the current currencyrate of two specific currencies
  */
 public class GetCurrencyRateIntentHandler implements RequestHandler {
 

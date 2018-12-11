@@ -12,7 +12,7 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.intentName;
 
 /**
- * This handler is triggered when the user wants to know a currency code to a specific currency.
+ * This handlers is triggered when the user wants to know a currency code to a specific currency.
  */
 public class GetCurrencyCodeIntentHandler implements RequestHandler {
 

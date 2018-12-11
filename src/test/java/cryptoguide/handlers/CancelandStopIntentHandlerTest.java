@@ -1,8 +1,7 @@
-package cryptoguide.handler;
+package cryptoguide.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.model.Response;
-import cryptoguide.handlers.SessionEndedRequestHandler;
 import cryptoguide.other.AlexaTexts;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,13 +11,13 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
-public class SessionEndedRequestHandlerTest {
+public class CancelandStopIntentHandlerTest {
 
-    private SessionEndedRequestHandler handler;
+    private CancelandStopIntentHandler handler;
 
     @Before
     public void setup() {
-        handler = new SessionEndedRequestHandler();
+        handler = new CancelandStopIntentHandler();
     }
 
     @Test
@@ -28,12 +27,9 @@ public class SessionEndedRequestHandlerTest {
         assertTrue(handler.canHandle(inputMock));
     }
 
-    /*
-    Not sure how to Test empty response
     @Test
     public void handleTest1() {
         final Response response = TestUtil.standardTestForHandle(handler);
-        assertTrue(response.getOutputSpeech().toString().contains(""));
+        assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.CSI_SP));
     }
-    */
 }

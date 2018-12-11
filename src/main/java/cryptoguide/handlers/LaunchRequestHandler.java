@@ -24,7 +24,7 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.requestType;
 
 /**
- * This handler is triggered after CryptoGuide has been started
+ * This handlers is triggered after CryptoGuide has been started
  */
 public class LaunchRequestHandler implements RequestHandler {
 

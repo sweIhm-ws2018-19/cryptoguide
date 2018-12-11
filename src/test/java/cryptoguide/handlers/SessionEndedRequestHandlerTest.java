@@ -1,24 +1,22 @@
-package cryptoguide.handler;
+package cryptoguide.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
-import com.amazon.ask.model.Response;
-import cryptoguide.handlers.CancelandStopIntentHandler;
-import cryptoguide.other.AlexaTexts;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
-public class CancelandStopIntentHandlerTest {
+public class SessionEndedRequestHandlerTest {
 
-    private CancelandStopIntentHandler handler;
+    private SessionEndedRequestHandler handler;
 
     @Before
     public void setup() {
-        handler = new CancelandStopIntentHandler();
+        handler = new SessionEndedRequestHandler();
     }
 
     @Test
@@ -29,8 +27,9 @@ public class CancelandStopIntentHandlerTest {
     }
 
     @Test
-    public void handleTest1() {
-        final Response response = TestUtil.standardTestForHandle(handler);
-        assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.CSI_SP));
+    public void handleTest() {
+        HandlerInput input = TestUtil.mockHandlerInput("Bitcoin", "Euro", null ,null);
+        assertNotNull(input.getResponseBuilder().build());
     }
+
 }
