@@ -1,12 +1,14 @@
 package cryptoguide.handlers;
 
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
+import com.amazon.ask.model.Response;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mockito;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import java.util.Optional;
+
+import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
 
@@ -29,7 +31,13 @@ public class SessionEndedRequestHandlerTest {
     @Test
     public void handleTest() {
         HandlerInput input = TestUtil.mockHandlerInput("Bitcoin", "Euro", null ,null);
-        assertNotNull(input.getResponseBuilder().build());
+        Optional<Response> handlerOptional = handler.handle(input);
+        Optional<Response> builderOptional = input.getResponseBuilder().build();
+        handlerOptional.orElseThrow(RuntimeException::new);
+        builderOptional.orElseThrow(RuntimeException::new);
+        Response handlerResponse = handlerOptional.get();
+        Response builderResponse = builderOptional.get();
+        assertEquals(handlerResponse, builderResponse);
     }
 
 }
