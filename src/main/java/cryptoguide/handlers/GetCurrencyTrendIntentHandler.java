@@ -21,7 +21,7 @@ public class GetCurrencyTrendIntentHandler implements RequestHandler {
 
     @Override
     public boolean canHandle(HandlerInput input) {
-        return input.matches(intentName(GET_CURRENCY_TREND_INTENT));
+        return false;
     }
 
     @Override
