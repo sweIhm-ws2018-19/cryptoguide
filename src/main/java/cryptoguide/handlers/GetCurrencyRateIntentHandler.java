@@ -91,8 +91,10 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         }
 
         if (input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
-            double rateDiff = rate - pastRate;
-            rateTrend =  (100 * rateDiff) / rate;
+            if (rate != 0) {
+                double rateDiff = rate - pastRate;
+                rateTrend =  (100 * rateDiff) / rate;
+            }
         }
 
         if(rate != 0.0 || pastRate != 0.0) {
@@ -140,10 +142,10 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         if (input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
             if (rateTrend >= 0) {
                 speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist von " +  pastRateString + " auf " + rateString
-                + " gestiegen, was einer Steigerung von " + rateTrendString + "entspricht.";
+                + " gestiegen, was einer Steigerung von " + rateTrendString + " Prozent entspricht.";
             } else {
-                speechText = "Der Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist von " +  pastRateString + " auf " + rateString
-                        + " gesunken, was einem Kursverlust von " + rateTrendString + "entspricht.";
+                speechText = "Der Kurs " + primaryCurrency +  " zu " +  secondaryCurrency + " ist von " +  pastRateString + " auf " + rateString
+                        + " gesunken, was einem Kursverlust von " + rateTrendString + " Prozent entspricht.";
             }
         }
         return speechText;
