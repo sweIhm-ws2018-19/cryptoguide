@@ -55,6 +55,8 @@ class TestUtil {
 
     public static Response standardTestForHandle(RequestHandler handler) {
 
+        return parameterizedTestForHandle(handler ,"Bitcoin", "asdf", "0", "0");
+        /*
         final Map<String, Object> sessionAttributes = new HashMap<>();
         sessionAttributes.put("LIST_OF_CURRENCIES", "Test");
         final HandlerInput inputMock = TestUtil.mockHandlerInput("Bitcoin", "asdf", "0", "0");
@@ -67,6 +69,23 @@ class TestUtil {
         assertNotEquals("Test", response.getReprompt());
         assertNotNull(response.getOutputSpeech());
         return response;
+        */
 
+    }
+
+    public static Response parameterizedTestForHandle(RequestHandler handler, String primaryCurrency, String secondaryCurrency, String rateDate, String currencyAmount) {
+
+        final Map<String, Object> sessionAttributes = new HashMap<>();
+        sessionAttributes.put("LIST_OF_CURRENCIES", "Test");
+        final HandlerInput inputMock = TestUtil.mockHandlerInput(primaryCurrency, secondaryCurrency, rateDate, currencyAmount);
+        final Optional<Response> res = handler.handle(inputMock);
+
+        assertTrue(res.isPresent());
+        final Response response = res.get();
+
+
+        assertNotEquals("Test", response.getReprompt());
+        assertNotNull(response.getOutputSpeech());
+        return response;
     }
 }

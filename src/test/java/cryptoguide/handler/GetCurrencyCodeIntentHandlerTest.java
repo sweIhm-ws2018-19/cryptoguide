@@ -40,4 +40,10 @@ public class GetCurrencyCodeIntentHandlerTest {
         assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.GCCI_CTH));
     }
 
+    @Test
+    public void handleTestCurrencyIsNull() {
+        final Response response = TestUtil.parameterizedTestForHandle(handler, null, null, "0", "0");
+        assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.GCCI_SP_ERROR));
+    }
+
 }
