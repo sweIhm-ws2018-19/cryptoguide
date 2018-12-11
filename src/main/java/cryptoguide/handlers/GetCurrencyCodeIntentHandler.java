@@ -29,7 +29,7 @@ public class GetCurrencyCodeIntentHandler implements RequestHandler {
         Intent intent = intentRequest.getIntent();
         Map<String, Slot> slots = intent.getSlots();
 
-        String currency = slots.get("currency").getValue();
+        String currency = slots.get("primaryCurrency").getValue();
 
         if (currency == null) {
             return input.getResponseBuilder()

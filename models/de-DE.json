@@ -80,19 +80,19 @@
           "name": "GetCurrencyCodeIntent",
           "slots": [
             {
-              "name": "currency",
+              "name": "primaryCurrency",
               "type": "LIST_OF_CURRENCIES"
             }
           ],
           "samples": [
-            "Was ist Währungscode von {currency}",
-            "Was ist der Währungscode zu {currency}",
-            "Wie lautet der Währungscode zu {currency}",
-            "Wie lautet der Währungscode von {currency}",
-            "Währungscode von {currency}",
-            "Währungscode {currency}",
-            "Kürzel von {currency}",
-            "Was ist das Kürzel von {currency}"
+            "Was ist Währungscode von {primaryCurrency}",
+            "Was ist der Währungscode zu {primaryCurrency}",
+            "Wie lautet der Währungscode zu {primaryCurrency}",
+            "Wie lautet der Währungscode von {primaryCurrency}",
+            "Währungscode von {primaryCurrency}",
+            "Währungscode {primaryCurrency}",
+            "Kürzel von {primaryCurrency}",
+            "Was ist das Kürzel von {primaryCurrency}"
           ]
         },
         {
