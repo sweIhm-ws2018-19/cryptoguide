@@ -30,6 +30,7 @@ public class GetHelpRatesIntentHandlerTest {
     @Test
     public void handleTest1() {
         final Response response = TestUtil.standardTestForHandle(handler);
-        assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.GHRI_SP));
+        String responseString = response.getOutputSpeech().toString();
+        assertTrue(responseString.contains(AlexaTexts.GHRI_SP));
     }
 }

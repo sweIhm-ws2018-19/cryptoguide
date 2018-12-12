@@ -33,7 +33,7 @@ public class AlexaTexts {
                                          "oder 'Wie war der Kurs von Bitcoin zu Euro letzten Montag'. " +
                                          "Außerdem kannst du nachfragen wie sich der Kurs zwischen zwei währungen entwickelt hat. Sage zum Beispiel" +
                                          "'Wie hat sich der Kurs von Bitcoin zu Euro seit zehnten elften 2015 entwickelt' " +
-                                         "Um Währungscodes zu erfahren sage zum Beispiel 'Was ist der Währungscode zu Dollar' ";
+                                         "Um Währungscodes zu erfahren sage zum Beispiel 'Was ist der Währungscode zu Dollar'";
     public static final String GHRI_CTH = "Hilfe zu Kursen";
 
     //GetHelpPortfolioIntentHandler GHPI
