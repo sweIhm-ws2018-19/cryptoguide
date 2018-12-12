@@ -28,7 +28,12 @@ public class AlexaTexts {
     public static final String HI_CTH = "Hilfe";
 
     //GetHelpRatesIntentHandler GHRI
-    public static final String GHRI_SP = "Um aktuelle Kurse von Währungen zu erfahren sage zum Beispiel 'Wie ist der aktuelle Kurs von Bitcoin zu Euro'. Du kannst auch Vergangene Kurse abfragen sage zum Beispiel 'Wie war der Kurs von Bitcoin zu Euro am zehnten elften 2015' oder 'Wie war der Kurs von Bitcoin zu Euro letzten Montag'. Um Währungscodes zu erfahren sage zum Beispiel 'Was ist der Währungscode zu Dollar'";
+    public static final String GHRI_SP = "Um aktuelle Kurse von Währungen zu erfahren sage zum Beispiel 'Wie ist der aktuelle Kurs von Bitcoin zu Euro'. " +
+                                         "Du kannst auch Vergangene Kurse abfragen sage zum Beispiel 'Wie war der Kurs von Bitcoin zu Euro am zehnten elften 2015' " +
+                                         "oder 'Wie war der Kurs von Bitcoin zu Euro letzten Montag'. " +
+                                         "Außerdem kannst du nachfragen wie sich der Kurs zwischen zwei währungen entwickelt hat. Sage zum Beispiel" +
+                                         "'Wie hat sich der Kurs von Bitcoin zu Euro seit zehnten elften 2015 entwickelt' " +
+                                         "Um Währungscodes zu erfahren sage zum Beispiel 'Was ist der Währungscode zu Dollar' ";
     public static final String GHRI_CTH = "Hilfe zu Kursen";
 
     //GetHelpPortfolioIntentHandler GHPI
