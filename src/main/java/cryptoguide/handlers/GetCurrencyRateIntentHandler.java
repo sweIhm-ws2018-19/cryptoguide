@@ -90,11 +90,9 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
             }
         }
 
-        if (input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
-            if (rate != 0) {
-                double rateDiff = rate - pastRate;
-                rateTrend =  (100 * rateDiff) / rate;
-            }
+        if (input.matches(intentName(GET_CURRENCY_TREND_INTENT)) && (rate != 0)) {
+            double rateDiff = rate - pastRate;
+            rateTrend =  (100 * rateDiff) / rate;
         }
 
         if(rate != 0.0 || pastRate != 0.0) {
@@ -118,13 +116,13 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         String rateString;
         String speechText = "";
         String pastRateString;
-        String rateTrendString = CryptoUtils.doubleToSpeech(rateTrend, 2);
+        String rateTrendString = CryptoUtils.doubleToSpeech(Math.abs(rateTrend), 2);
         if(rate < 1.0 || pastRate < 1.0) {
             rateString = CryptoUtils.doubleToSpeech(rate, 8);
-            pastRateString = CryptoUtils.doubleToSpeech(rate, 8);
+            pastRateString = CryptoUtils.doubleToSpeech(pastRate, 8);
         } else {
             rateString = CryptoUtils.doubleToSpeech(rate, 3);
-            pastRateString = CryptoUtils.doubleToSpeech(rate, 3);
+            pastRateString = CryptoUtils.doubleToSpeech(pastRate, 3);
         }
         if (input.matches(intentName(GET_CURRENCY_RATE_INTENT))) {
             speechText = "Der aktuelle Kurs von " + primaryCurrency +  " zu " +  secondaryCurrency + " ist 1 zu " + rateString;
