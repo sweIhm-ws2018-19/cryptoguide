@@ -18,9 +18,9 @@ import com.amazon.ask.SkillStreamHandler;
 import com.amazon.ask.Skills;
 import cryptoguide.handlers.*;
 
-class CryptoGuideStreamHandler extends SkillStreamHandler {
+public class CryptoGuideStreamHandler extends SkillStreamHandler {
 
-    static Skill getSkill() {
+    private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
                         new LaunchRequestHandler(),
@@ -36,7 +36,7 @@ class CryptoGuideStreamHandler extends SkillStreamHandler {
                 .build();
     }
 
-    CryptoGuideStreamHandler() {
+    public CryptoGuideStreamHandler() {
         super(getSkill());
     }
 
