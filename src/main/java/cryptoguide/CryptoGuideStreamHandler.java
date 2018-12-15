@@ -20,7 +20,7 @@ import cryptoguide.handlers.*;
 
 public class CryptoGuideStreamHandler extends SkillStreamHandler {
 
-    static Skill getSkill() {
+    private static Skill getSkill() {
         return Skills.standard()
                 .addRequestHandlers(
                         new LaunchRequestHandler(),
