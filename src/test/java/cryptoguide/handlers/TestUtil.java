@@ -1,4 +1,4 @@
-package cryptoguide.handler;
+package cryptoguide.handlers;
 
 import com.amazon.ask.attributes.AttributesManager;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.when;
 
 class TestUtil {
 
-    public static HandlerInput mockHandlerInput(String primaryCurrency, String secondaryCurrency, String rateDate, String currencyAmount) {
+    static HandlerInput mockHandlerInput(String primaryCurrency, String secondaryCurrency, String rateDate, String currencyAmount) {
 
         final AttributesManager attributesManagerMock = Mockito.mock(AttributesManager.class);
 
@@ -54,20 +54,39 @@ class TestUtil {
         return input;
     }
 
-    public static Response standardTestForHandle(RequestHandler handler) {
+    static Response standardTestForHandle(RequestHandler handler) {
+
+        return parameterizedTestForHandle(handler ,"Bitcoin", "asdf", "0", "0");
+        /*
+        final Map<String, Object> sessionAttributes = new HashMap<>();
+        sessionAttributes.put("LIST_OF_CURRENCIES", "Test");
+        final HandlerInput inputMock = TestUtil.mockHandlerInput("Bitcoin", "asdf", "0", "0");
+        final Optional<Response> res = handlers.handle(inputMock);
+
+        assertTrue(res.isPresent());
+        final Response response = res.get();
+
+        //assertFalse(response.getShouldEndSession());
+        assertNotEquals("Test", response.getReprompt());
+        assertNotNull(response.getOutputSpeech());
+        return response;
+        */
+
+    }
+
+    static Response parameterizedTestForHandle(RequestHandler handler, String primaryCurrency, String secondaryCurrency, String rateDate, String currencyAmount) {
 
         final Map<String, Object> sessionAttributes = new HashMap<>();
         sessionAttributes.put("LIST_OF_CURRENCIES", "Test");
-        final HandlerInput inputMock = TestUtil.mockHandlerInput("BTC", "asdf", "0", "0");
+        final HandlerInput inputMock = TestUtil.mockHandlerInput(primaryCurrency, secondaryCurrency, rateDate, currencyAmount);
         final Optional<Response> res = handler.handle(inputMock);
 
         assertTrue(res.isPresent());
         final Response response = res.get();
 
-        assertFalse(response.getShouldEndSession());
+
         assertNotEquals("Test", response.getReprompt());
         assertNotNull(response.getOutputSpeech());
         return response;
-
     }
 }

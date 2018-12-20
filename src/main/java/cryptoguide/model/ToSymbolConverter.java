@@ -7,8 +7,8 @@ import java.util.HashMap;
  */
 public class ToSymbolConverter {
 
-    // This is a static class so we need a private constructor to hide the standard public one.
-    private ToSymbolConverter() {
+    // This is a static class so we need a protected constructor to hide the standard public one.
+    ToSymbolConverter() {
         throw new IllegalStateException("This is a static class, can't create a instance.");
     }
 

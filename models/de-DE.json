@@ -77,22 +77,53 @@
           ]
         },
         {
+          "name": "GetCurrencyTrendIntent",
+          "slots": [
+            {
+              "name": "rateDate",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "secondaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            }
+          ],
+          "samples:": [
+            "Wie ist die Kursentwicklung seit {rateDate} von {primaryCurrency} zu {secondaryCurrency}",
+            "Wie hat sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate} entwickelt",
+            "Wie entwickelte sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Gib mir die Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Sag mir die Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Wie entwickelt sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "{primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "{primaryCurrency} {secondaryCurrency} seit {rateDate}",
+            "{primaryCurrency} {secondaryCurrency} {rateDate}"
+          ]
+        },
+        {
           "name": "GetCurrencyCodeIntent",
           "slots": [
             {
-              "name": "currency",
+              "name": "primaryCurrency",
               "type": "LIST_OF_CURRENCIES"
             }
           ],
           "samples": [
-            "Was ist Währungscode von {currency}",
-            "Was ist der Währungscode zu {currency}",
-            "Wie lautet der Währungscode zu {currency}",
-            "Wie lautet der Währungscode von {currency}",
-            "Währungscode von {currency}",
-            "Währungscode {currency}",
-            "Kürzel von {currency}",
-            "Was ist das Kürzel von {currency}"
+            "Was ist Währungscode von {primaryCurrency}",
+            "Was ist der Währungscode zu {primaryCurrency}",
+            "Wie lautet der Währungscode zu {primaryCurrency}",
+            "Wie lautet der Währungscode von {primaryCurrency}",
+            "Währungscode von {primaryCurrency}",
+            "Währungscode {primaryCurrency}",
+            "Kürzel von {primaryCurrency}",
+            "Was ist das Kürzel von {primaryCurrency}"
           ]
         },
         {
@@ -199,6 +230,30 @@
             "Für wie viel {secondaryCurrency} kann ich {amount} {primaryCurrency} verkaufen",
             "Für wie viel {secondaryCurrency} kann ich {amount} {primaryCurrency} kaufen",
             "Wie viel {secondaryCurrency} brauche ich um {amount} {primaryCurrency} zu kaufen"
+          ]
+        },
+        {
+          "name": "GetPortfolioValueIntent",
+          "slots": [
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            }
+          ],
+          "samples": [
+            "Wie viel ist mein Portfolio in {primaryCurrency} Wert.",
+            "Wie viel ist zurzeit mein Portfolio in {primaryCurrency} Wert.",
+            "Wie viel {primaryCurrency} ist aktuell mein Portfolio Wert.",
+            "Was ist der aktuelle Wert meines Portfolios in {primaryCurrency}.",
+            "Was ist der aktuelle Wert in {primaryCurrency} meines Portfolios",
+            "Portfolio in {primaryCurrency}",
+            "Wert meines Portfolios in {primaryCurrency}",
+            "Wert des Portfolios in {primaryCurrency}",
+            "Wie viel {primaryCurrency} ist mein Portfolio Wert.",
+            "Welcher Betrag in {primaryCurrency} ist mein Portfolio Wert.",
+            "Für wie viel {primaryCurrency} kann ich mein Portfolio verkaufen.",
+            "Wie viel {primaryCurrency} befinden sich im Portfolio",
+            "Wie viel {primaryCurrency} befinden sich in meinem Portfolio"
           ]
         }
       ],

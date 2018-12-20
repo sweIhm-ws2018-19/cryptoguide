@@ -5,6 +5,11 @@ import org.junit.Test;
 
 public class TimestampGeneratorTest {
 
+    @Test(expected = IllegalStateException.class)
+    public void constructorTest() {
+        TimestampGenerator generator = new TimestampGenerator();
+    }
+
     @Test
     public void getTimeStampForDateStringTestInvalidString() {
         String dateString = "1831-12-0";
@@ -66,5 +71,19 @@ public class TimestampGeneratorTest {
         String input = "2016-W3-WE";
         long result = TimestampGenerator.convertToTimeStamp(input);
         Assert.assertEquals(1453593600, result);
+    }
+
+    @Test
+    public void convertToTimestampWithBeginOfMonth() {
+        String input = "2016-03-XX";
+        long result = TimestampGenerator.convertToTimeStamp(input);
+        Assert.assertEquals(1456790400, result);
+    }
+
+    @Test
+    public void convertToTimestampNull() {
+        String nullString = null;
+        long result = TimestampGenerator.convertToTimeStamp(nullString);
+        Assert.assertEquals(-1, result);
     }
 }

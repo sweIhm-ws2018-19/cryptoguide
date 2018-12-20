@@ -9,7 +9,7 @@ import java.util.Optional;
 import static com.amazon.ask.request.Predicates.intentName;
 
 /**
- * This handler is triggered when the user wants to get help with the portfolio
+ * This handlers is triggered when the user wants to get help with the portfolio
  */
 public class GetHelpPortfolioIntentHandler implements RequestHandler {
     @Override
