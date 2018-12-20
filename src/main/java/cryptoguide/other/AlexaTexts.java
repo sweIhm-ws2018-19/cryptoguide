@@ -33,11 +33,22 @@ public class AlexaTexts {
                                          "oder 'Wie war der Kurs von Bitcoin zu Euro letzten Montag'. " +
                                          "Außerdem kannst du nachfragen wie sich der Kurs zwischen zwei währungen entwickelt hat. Sage zum Beispiel " +
                                          "'Wie hat sich der Kurs von Bitcoin zu Euro seit zehnten elften 2015 entwickelt'. " +
+                                         "Wenn du wissen willst wie viel du von einer Währung benötigst um eine andere zu bekommen sage zum Beispiel" +
+                                         "'Wie viel Bitcoin bekomme ich für 20 Euro'. " +
                                          "Um Währungscodes zu erfahren sage zum Beispiel 'Was ist der Währungscode zu Dollar'";
     public static final String GHRI_CTH = "Hilfe zu Kursen";
 
     //GetHelpPortfolioIntentHandler GHPI
-    public static final String GHPI_SP = "Diese Funktion unterstütze ich aktuell noch nicht.";
+    public static final String GHPI_SP = "Um Währungen dem Portfolio hinzuzufügen sage zum Beispiel: " +
+                                         "''. " +
+                                         "Außerdem kannst du Währungen aus dem Portfolio wieder entfernen. Sage dafür einfach: " +
+                                         "''. " +
+                                         "Um den Inhalt des Porfolios abzufragen sage zum Besipiel: " +
+                                         "''. " +
+                                         "Du kannst dir auch den aktuellen Wert des Portfolios ausgeben lassen. Sage dafür: " +
+                                         "''. " +
+                                         "Um dir den vergangenen Wert des Portfolios ausgeben zu lassen sage zum Beispiel: " +
+                                         "''. ";
     public static final String GHPI_CTH = "Hilfe zum Portfolio";
 
     //GetCurrencyCodeIntentHandler GCCI
