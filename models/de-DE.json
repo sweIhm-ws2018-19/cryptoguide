@@ -233,6 +233,26 @@
           ]
         },
         {
+          "name": "AddToPortfolioIntent",
+          "slots": [
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "amount",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Fuege {amount} {primaryCurrency} meinem Portfolio hinzu.",
+            "Fuege {amount} {primaryCurrency} zu meinem Portfolio hinzu.",
+            "Lege {amount} {primaryCurrency} in meinem Portfolio ab.",
+            "Lege {amount} {primaryCurrency} im Portfolio ab.",
+            "Addiere {amount} {primaryCurrency} zu meinem Portfolio hinzu."
+          ]
+        },
+        {
           "name": "GetPortfolioValueIntent",
           "slots": [
             {

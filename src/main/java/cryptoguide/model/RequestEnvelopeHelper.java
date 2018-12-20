@@ -14,12 +14,10 @@ public class RequestEnvelopeHelper {
         throw new IllegalStateException("Static class, can't create an instance.");
     }
 
-    public static String getPrimaryCurrencyString (HandlerInput input) {
+    public static Map<String, Slot> getSlots (HandlerInput input) {
         Request request = input.getRequestEnvelope().getRequest();
         IntentRequest intentRequest = (IntentRequest) request;
         Intent intent = intentRequest.getIntent();
-        Map<String, Slot> slots = intent.getSlots();
-
-        return slots.get("primaryCurrency").getValue();
+        return intent.getSlots();
     }
 }
