@@ -37,8 +37,9 @@ class TestUtil {
                                         .withName("rateDate")
                                         .withValue(rateDate)
                                         .build())
-                                .putSlotsItem("currencyAmount", Slot.builder()
-                                        .withName("currencyAmount")
+
+                                .putSlotsItem("amount", Slot.builder()
+                                        .withName("amount")
                                         .withValue(currencyAmount)
                                         .build())
                                 .build())
