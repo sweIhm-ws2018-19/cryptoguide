@@ -1,6 +1,7 @@
 package cryptoguide.other;
 
 import java.text.DecimalFormat;
+import java.util.Map;
 
 public class CryptoUtils {
 
@@ -20,5 +21,19 @@ public class CryptoUtils {
             }
             return new DecimalFormat(format).format(db);
         }
+    }
+
+    public static String currencyMapToSpeech(Map<String, Object> inputMap) {
+        String speech = "";
+        if(inputMap.isEmpty()) {
+            speech =  "In deinem Portfolio befinden sich aktuell keine Währungen.";
+        } else {
+            speech = "In deinem Portfolio befinden sich ";
+
+            for(Map.Entry<String, Object> entry : inputMap.entrySet()) {
+                speech += ((int) entry.getValue() + " " + entry.getKey() + " ");
+            }
+        }
+        return speech;
     }
 }

@@ -67,5 +67,8 @@ public class AlexaTexts {
     public static final String GPCI_CTH = "Portfolioinhalt";
 
     //RemoveFromPortfolioIntentHandler RFPI
-    public static final String RFPI_CTH = "Portfolio";
+    public static final String RFPI_CTH = "Löschen aus dem Portfolio";
+    public static final String RFPI_AMOUNTLOW_ERROR = "Die Anzahl der zu löschenden Währung muss größer als Null sein!";
+    public static final String RFPI_UNKNOWN_ERROR = "Beim Löschen der Währungen ist ein Fehler aufgetreten.";
+
 }

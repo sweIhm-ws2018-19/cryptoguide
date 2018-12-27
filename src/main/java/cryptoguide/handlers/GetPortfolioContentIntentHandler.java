@@ -5,6 +5,7 @@ import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.Response;
 import cryptoguide.model.PortfolioManager;
 import cryptoguide.other.AlexaTexts;
+import cryptoguide.other.CryptoUtils;
 
 
 import java.util.Map;
@@ -22,8 +23,8 @@ public class GetPortfolioContentIntentHandler implements RequestHandler {
     @Override
     public Optional<Response> handle(HandlerInput input) {
         Map<String, Object> content = PortfolioManager.getPortfolioContent(input);
+        String speech = CryptoUtils.currencyMapToSpeech(content);
 
-        String speech = "In deinem Portfolio befindet sich: " + content.toString();
         return input.getResponseBuilder()
                 .withSimpleCard(AlexaTexts.GPCI_CTH, speech)
                 .withSpeech(speech)

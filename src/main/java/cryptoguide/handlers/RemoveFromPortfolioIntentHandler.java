@@ -29,22 +29,37 @@ public class RemoveFromPortfolioIntentHandler implements RequestHandler {
         String amountAsString = slots.get("amount").getValue();
         int amountToRemove = Integer.parseInt(amountAsString);
 
-        if (currencyToRemove == null) {
+        if (currencyToRemove == null || amountAsString == null) {
             return input.getResponseBuilder()
-                    .withSimpleCard(AlexaTexts.GCCI_CTH, AlexaTexts.GCCI_SP_ERROR)
+                    .withSimpleCard(AlexaTexts.RFPI_CTH, AlexaTexts.GCCI_SP_ERROR)
                     .withSpeech(AlexaTexts.GCCI_SP_ERROR)
                     .withShouldEndSession(false)
                     .build();
         }
+
+        if (amountToRemove <= 0) {
+            return input.getResponseBuilder()
+                    .withSimpleCard(AlexaTexts.RFPI_CTH, AlexaTexts.RFPI_AMOUNTLOW_ERROR)
+                    .withSpeech(AlexaTexts.GCCI_SP_ERROR)
+                    .withShouldEndSession(false)
+                    .build();
+        }
+
         String currencyCode = ToSymbolConverter.convert(currencyToRemove.toLowerCase());
 
-        PortfolioManager.removeAmount(input, currencyCode, amountToRemove);
-
-        String speech = "Ich habe " + amountAsString + currencyToRemove + " aus dem Portfolio entfernt.";
-        return input.getResponseBuilder()
-                .withSimpleCard(AlexaTexts.GCCI_CTH, speech)
-                .withSpeech(speech)
-                .withShouldEndSession(false)
-                .build();
+        if(PortfolioManager.removeAmount(input, currencyCode, amountToRemove)) {
+            String speech = "Ich habe " + amountAsString + " " + currencyToRemove + " aus dem Portfolio entfernt.";
+            return input.getResponseBuilder()
+                    .withSimpleCard(AlexaTexts.RFPI_CTH, speech)
+                    .withSpeech(speech)
+                    .withShouldEndSession(false)
+                    .build();
+        } else {
+            return input.getResponseBuilder()
+                    .withSimpleCard(AlexaTexts.RFPI_CTH, AlexaTexts.RFPI_UNKNOWN_ERROR)
+                    .withSpeech(AlexaTexts.GCCI_SP_ERROR)
+                    .withShouldEndSession(false)
+                    .build();
+        }
     }
 }
