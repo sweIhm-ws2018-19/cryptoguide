@@ -253,6 +253,32 @@
           ]
         },
         {
+          "name": "RemoveFromPortfolioIntent",
+          "slots": [
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "amount",
+              "type": "AMAZON.NUMBER"
+            }
+          ],
+          "samples": [
+            "Entferne {amount} {primaryCurrency} von meinem Portfolio.",
+            "Entferne {amount} {primaryCurrency} aus meinem Portfolio.",
+            "Subtrahiere {amount} {primaryCurrency} von meinem Portfolio."
+          ]
+        },
+        {
+          "name": "GetPortfolioContentIntent",
+          "slots": [
+          ],
+          "samples": [
+            "Was befindet sich in meinem Portfolio."
+          ]
+        },
+        {
           "name": "GetPortfolioValueIntent",
           "slots": [
             {

@@ -32,7 +32,9 @@ public class CryptoGuideStreamHandler extends SkillStreamHandler {
                         new GetHelpPortfolioIntentHandler(),
                         new GetCurrencyRateIntentHandler(),
                         new GetCurrencyCodeIntentHandler(),
+                        new GetPortfolioContentIntentHandler(),
                         new AddToPortfolioIntentHandler(),
+                        new RemoveFromPortfolioIntentHandler(),
                         new GetPortfolioValueIntentHandler())
                 .withTableName("cryptoguideData")
                 .withAutoCreateTable(true)

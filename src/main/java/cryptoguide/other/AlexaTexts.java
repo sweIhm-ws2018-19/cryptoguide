@@ -62,4 +62,10 @@ public class AlexaTexts {
     public static final String GCRI_SP_ERROR_AMOUNT_TOO_SMALL = "Eine negative Menge oder null ist nicht zulässig. Versuche es noch einmal.";
     public static final String GCRI_CTH = "Ermittelter Kurs";
     public static final String GCRI_CTH_ERROR = "Fehler";
+
+    //GetPortfolioContentIntentHandler GPCI
+    public static final String GPCI_CTH = "Portfolioinhalt";
+
+    //RemoveFromPortfolioIntentHandler RFPI
+    public static final String RFPI_CTH = "Portfolio";
 }
