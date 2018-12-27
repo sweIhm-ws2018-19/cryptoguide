@@ -43,7 +43,7 @@ public class AlexaTexts {
                                          "''. " +
                                          "Außerdem kannst du Währungen aus dem Portfolio wieder entfernen. Sage dafür einfach: " +
                                          "''. " +
-                                         "Um den Inhalt des Porfolios abzufragen sage zum Besipiel: " +
+                                         "Um den Inhalt des Porfolios abzufragen sage zum Beispiel: " +
                                          "''. " +
                                          "Du kannst dir auch den aktuellen Wert des Portfolios ausgeben lassen. Sage dafür: " +
                                          "''. " +
