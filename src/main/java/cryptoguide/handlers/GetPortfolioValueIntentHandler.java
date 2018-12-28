@@ -8,8 +8,6 @@ import cryptoguide.model.RequestEnvelopeHelper;
 import cryptoguide.model.TimestampGenerator;
 import cryptoguide.model.ToSymbolConverter;
 import cryptoguide.other.AlexaTexts;
-
-import java.sql.Timestamp;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Optional;

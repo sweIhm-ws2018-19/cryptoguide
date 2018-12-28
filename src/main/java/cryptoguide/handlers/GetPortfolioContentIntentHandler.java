@@ -6,8 +6,6 @@ import com.amazon.ask.model.Response;
 import cryptoguide.model.PortfolioManager;
 import cryptoguide.other.AlexaTexts;
 import cryptoguide.other.CryptoUtils;
-
-
 import java.util.Map;
 import java.util.Optional;
 
