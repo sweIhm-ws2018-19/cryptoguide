@@ -22,7 +22,7 @@ public class PortfolioManager {
             return 0;
         } else {
             Object obj = all.get(currencyCode);
-            return (int) obj;
+            return Integer.valueOf((String) obj).intValue();
         }
     }
 
@@ -33,7 +33,7 @@ public class PortfolioManager {
             int amountInDB = getAmount(input, currencyCode);
             AttributesManager manager = input.getAttributesManager();
             Map<String, Object> attributes = manager.getPersistentAttributes();
-            attributes.put(currencyCode, amountInDB + amount);
+            attributes.put(currencyCode, String.valueOf(amount + amountInDB));
             manager.setPersistentAttributes(attributes);
             manager.savePersistentAttributes();
             return true;
@@ -54,7 +54,7 @@ public class PortfolioManager {
                 if (newValue == 0) {
                     attributes.remove(currencyCode);
                 } else {
-                    attributes.put(currencyCode, newValue);
+                    attributes.put(currencyCode, String.valueOf(newValue));
                 }
                 manager.setPersistentAttributes(attributes);
                 manager.savePersistentAttributes();

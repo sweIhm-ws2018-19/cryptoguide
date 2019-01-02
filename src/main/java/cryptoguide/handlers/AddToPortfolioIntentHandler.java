@@ -39,7 +39,7 @@ public class AddToPortfolioIntentHandler implements RequestHandler {
 
         PortfolioManager.addAmount(input, currencyCode, amount);
 
-        String speech = "Ich habe " + amountString + currency + " dem Portfolio hinzugefuegt.";
+        String speech = "Ich habe " + amountString + currency + " dem Portfolio hinzugefügt.";
         return input.getResponseBuilder()
                 .withSimpleCard(AlexaTexts.GCCI_CTH, speech)
                 .withSpeech(speech)
