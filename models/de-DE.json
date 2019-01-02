@@ -49,6 +49,7 @@
         },
         {
           "name": "GetHelpRatesIntent",
+          "slots": [],
           "samples": [
             "Hilfe zu Kursen",
             "Ich brauche Hilfe zu den Kursen",
@@ -62,6 +63,7 @@
         },
         {
           "name": "GetHelpPortfolioIntent",
+          "slots": [],
           "samples": [
             "Hilfe zu Portfolio",
             "Hilfe zum Portfolio",
@@ -92,20 +94,7 @@
               "type": "LIST_OF_CURRENCIES"
             }
           ],
-          "samples:": [
-            "Wie ist die Kursentwicklung seit {rateDate} von {primaryCurrency} zu {secondaryCurrency}",
-            "Wie hat sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate} entwickelt",
-            "Wie entwickelte sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "Gib mir die Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "Sag mir die Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "Wie entwickelt sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "Von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "{primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
-            "{primaryCurrency} {secondaryCurrency} seit {rateDate}",
-            "{primaryCurrency} {secondaryCurrency} {rateDate}"
-          ]
+          "samples": []
         },
         {
           "name": "GetCurrencyCodeIntent",
@@ -272,8 +261,7 @@
         },
         {
           "name": "GetPortfolioContentIntent",
-          "slots": [
-          ],
+          "slots": [],
           "samples": [
             "Was befindet sich in meinem Portfolio."
           ]
@@ -290,16 +278,12 @@
             "Wie viel ist mein Portfolio in {primaryCurrency} Wert.",
             "Wie viel ist zurzeit mein Portfolio in {primaryCurrency} Wert.",
             "Wie viel {primaryCurrency} ist aktuell mein Portfolio Wert.",
-            "Was ist der aktuelle Wert meines Portfolios in {primaryCurrency}.",
-            "Was ist der aktuelle Wert in {primaryCurrency} meines Portfolios",
-            "Portfolio in {primaryCurrency}",
-            "Wert meines Portfolios in {primaryCurrency}",
-            "Wert des Portfolios in {primaryCurrency}",
+            "Was ist der aktuelle Wert in {primaryCurrency} meines Portfolios.",
             "Wie viel {primaryCurrency} ist mein Portfolio Wert.",
             "Welcher Betrag in {primaryCurrency} ist mein Portfolio Wert.",
             "Für wie viel {primaryCurrency} kann ich mein Portfolio verkaufen.",
             "Wie viel {primaryCurrency} befinden sich im Portfolio",
-            "Wie viel {primaryCurrency} befinden sich in meinem Portfolio"
+            "Wie viel {primaryCurrency} befinden sich in meinem Portfolio."
           ]
         }
       ],
