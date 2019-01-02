@@ -40,7 +40,7 @@ public class AlexaTexts {
 
     //GetHelpPortfolioIntentHandler GHPI
     public static final String GHPI_SP = "Um Währungen dem Portfolio hinzuzufügen sage zum Beispiel: " +
-                                         "'Fuege 2 Bitcoin meinem Portfolio hinzu'. " +
+                                         "'Füge 2 Bitcoin meinem Portfolio hinzu'. " +
                                          "Außerdem kannst du Währungen aus dem Portfolio wieder entfernen. Sage dafür einfach: " +
                                          "'Entferne 1 Bitcoin von meinem Portfolio'. " +
                                          "Um den Inhalt des Porfolios abzufragen sage zum Beispiel: " +

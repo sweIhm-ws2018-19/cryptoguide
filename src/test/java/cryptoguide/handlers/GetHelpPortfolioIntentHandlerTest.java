@@ -30,6 +30,6 @@ public class GetHelpPortfolioIntentHandlerTest {
     @Test
     public void handleTest1() {
         final Response response = TestUtil.standardTestForHandle(handler);
-        assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.GHPI_SP));
+        assertTrue(response.getOutputSpeech().toString().contains("Um Währungen dem Portfolio hinzuzufügen"));
     }
 }

@@ -11,7 +11,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Optional;
 
-import static com.amazon.ask.request.Predicates.intentName;
 import static org.junit.Assert.*;
 import static org.mockito.Matchers.any;
 import static org.mockito.Mockito.when;
@@ -37,23 +36,4 @@ public class CancelandStopIntentHandlerTest {
         final Response response = TestUtil.standardTestForHandle(handler);
         assertTrue(response.getOutputSpeech().toString().contains(AlexaTexts.CSI_SP));
     }
-
-    @Test
-    public void handleTest2() {
-        final Map<String, Object> sessionAttributes = new HashMap<>();
-        sessionAttributes.put("LIST_OF_CURRENCIES", "Test");
-        final HandlerInput inputMock = TestUtil.mockHandlerInput("Bitcoin", "Dollar", "2018-07-07", "5");
-        when(inputMock.matches(any())).thenReturn(true);
-        final Optional<Response> res = handler.handle(inputMock);
-
-        assertTrue(res.isPresent());
-        final Response response = res.get();
-
-        assertFalse(response.getShouldEndSession());
-        assertNotEquals("Test", response.getReprompt());
-        assertNotNull(response.getOutputSpeech());
-        assertTrue(response.getOutputSpeech().toString().contains("Vergangenheit"));
-    }
-
-
 }
