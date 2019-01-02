@@ -57,7 +57,7 @@ public class RemoveFromPortfolioIntentHandler implements RequestHandler {
         } else {
             return input.getResponseBuilder()
                     .withSimpleCard(AlexaTexts.RFPI_CTH, AlexaTexts.RFPI_UNKNOWN_ERROR)
-                    .withSpeech(AlexaTexts.GCCI_SP_ERROR)
+                    .withSpeech(AlexaTexts.RFPI_UNKNOWN_ERROR)
                     .withShouldEndSession(false)
                     .build();
         }

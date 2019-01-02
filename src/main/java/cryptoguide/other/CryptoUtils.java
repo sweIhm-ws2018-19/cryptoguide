@@ -31,7 +31,7 @@ public class CryptoUtils {
             speech = "In deinem Portfolio befinden sich ";
 
             for(Map.Entry<String, Object> entry : inputMap.entrySet()) {
-                speech += ((int) entry.getValue() + " " + entry.getKey() + " ");
+                speech += (entry.getValue() + " " + entry.getKey() + " ");
             }
         }
         return speech;
