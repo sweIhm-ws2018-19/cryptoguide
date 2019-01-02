@@ -3,12 +3,8 @@ package cryptoguide.handlers;
 import com.amazon.ask.dispatcher.request.handler.HandlerInput;
 import com.amazon.ask.dispatcher.request.handler.RequestHandler;
 import com.amazon.ask.model.*;
-import cryptoguide.model.CryptoCurrencyRateRetriever;
-import cryptoguide.model.RequestEnvelopeHelper;
-import cryptoguide.model.TimestampGenerator;
-import cryptoguide.model.ToSymbolConverter;
+import cryptoguide.model.*;
 import cryptoguide.other.AlexaTexts;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Optional;
 
@@ -35,27 +31,26 @@ public class GetPortfolioValueIntentHandler implements RequestHandler {
                     .build();
         }
         String currencyCode = ToSymbolConverter.convert(currency.toLowerCase());
+        Map<String, Object> content = PortfolioManager.getPortfolioContent(input);
 
-        Map<String, Object> persistentAttributes = input.getAttributesManager().getPersistentAttributes();
-        Iterator<Map.Entry<String, Object>> itr = persistentAttributes.entrySet().iterator();
         float value = 0;
-
+        String speech = "Es ist ein Fehler aufgetreten.";
         if (input.matches(intentName("GetPortfolioValueIntent"))) {
-            while (itr.hasNext()) {
-                Map.Entry<String, Object> entry = itr.next();
-                float amount = (int) entry.getValue();
+            for(Map.Entry<String, Object> entry : content.entrySet()) {
+                int amount = Integer.valueOf((String) entry.getValue());
                 value += CryptoCurrencyRateRetriever.getCurrentRate(entry.getKey(), currencyCode) * amount;
             }
+            speech = "Dein Portfolio ist aktuell " + value + currency + " wert ";
+
         } else if (input.matches(intentName("GetPastPortfolioValueIntent"))) {
             long timestamp = TimestampGenerator.convertToTimeStamp(slots.get("rateDate").getValue());
-            while (itr.hasNext()) {
-                Map.Entry<String, Object> entry = itr.next();
-                float amount = (int) entry.getValue();
+            for(Map.Entry<String, Object> entry : content.entrySet()) {
+                int amount = Integer.valueOf((String) entry.getValue());
                 value += CryptoCurrencyRateRetriever.getPastRate(entry.getKey(), currencyCode, timestamp) * amount;
             }
+            speech = "Dein Portfolio war in der Vergangenheit " + value + currency + " wert ";
         }
 
-        String speech = "Dein Portfolio ist aktuell " + value + currency + " wert ";
         return input.getResponseBuilder()
                 .withSimpleCard(AlexaTexts.GCCI_CTH, speech)
                 .withSpeech(speech)
