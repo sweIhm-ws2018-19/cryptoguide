@@ -279,26 +279,6 @@
           ]
         },
         {
-          "name": "GetPortfolioValueIntent",
-          "slots": [
-            {
-              "name": "primaryCurrency",
-              "type": "LIST_OF_CURRENCIES"
-            }
-          ],
-          "samples": [
-            "Wie viel ist mein Portfolio in {primaryCurrency} Wert.",
-            "Wie viel ist zurzeit mein Portfolio in {primaryCurrency} Wert.",
-            "Wie viel {primaryCurrency} ist aktuell mein Portfolio Wert.",
-            "Was ist der aktuelle Wert in {primaryCurrency} meines Portfolios.",
-            "Wie viel {primaryCurrency} ist mein Portfolio Wert.",
-            "Welcher Betrag in {primaryCurrency} ist mein Portfolio Wert.",
-            "Für wie viel {primaryCurrency} kann ich mein Portfolio verkaufen.",
-            "Wie viel {primaryCurrency} befinden sich im Portfolio",
-            "Wie viel {primaryCurrency} befinden sich in meinem Portfolio."
-          ]
-        },
-        {
           "name": "GetPastPortfolioValueIntent",
           "slots": [
             {
@@ -314,11 +294,9 @@
             "Wie viel war mein Portfolio am {rateDate} in {primaryCurrency} Wert.",
             "Wie viel war am {rateDate} mein Portfolio in {primaryCurrency} Wert.",
             "Wie viel {primaryCurrency} war mein Portfolio am {rateDate} Wert.",
-            "Wie viel Wert in {primaryCurrency} hatte mein Portfolio am {rateDate}.",
             "Welcher Betrag in {primaryCurrency} war mein Portfolio am {rateDate} Wert.",
             "Für wie viel {primaryCurrency} konnte ich mein Portfolio am {rateDate} verkaufen.",
-            "Wie viel {primaryCurrency} befanden sich am {rateDate} im Portfolio",
-            "Wie viel {primaryCurrency} befanden sich in meinem Portfolio am {rateDate}."
+            "Wie viel {primaryCurrency} befanden sich am {rateDate} im Portfolio"
           ]
         },
         {
