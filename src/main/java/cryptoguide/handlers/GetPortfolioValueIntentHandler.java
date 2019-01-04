@@ -52,7 +52,7 @@ public class GetPortfolioValueIntentHandler implements RequestHandler {
         }
 
         return input.getResponseBuilder()
-                .withSimpleCard(AlexaTexts.GCCI_CTH, speech)
+                .withSimpleCard(AlexaTexts.GPVI_CTH, speech)
                 .withSpeech(speech)
                 .withShouldEndSession(false)
                 .build();

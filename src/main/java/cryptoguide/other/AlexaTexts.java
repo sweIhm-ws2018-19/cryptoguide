@@ -71,4 +71,7 @@ public class AlexaTexts {
     public static final String RFPI_AMOUNTLOW_ERROR = "Die Anzahl der zu löschenden Währung muss größer als Null sein!";
     public static final String RFPI_UNKNOWN_ERROR = "Beim Löschen der Währungen ist ein Fehler aufgetreten.";
 
+    //GetPorrtfolioValueIntentHandler
+    public static final String GPVI_CTH = "Portfoliowert";
+
 }

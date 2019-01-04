@@ -296,7 +296,11 @@
             "Wie viel {primaryCurrency} war mein Portfolio am {rateDate} Wert.",
             "Welcher Betrag in {primaryCurrency} war mein Portfolio am {rateDate} Wert.",
             "Für wie viel {primaryCurrency} konnte ich mein Portfolio am {rateDate} verkaufen.",
-            "Wie viel {primaryCurrency} befanden sich am {rateDate} im Portfolio"
+            "Wie viel {primaryCurrency} befanden sich am {rateDate} im Portfolio",
+            "Was war der Wert meines Portfolios in {primaryCurrency} am {rateDate}",
+            "Was war mein Portfolio in {primaryCurrency} am {rateDate} Wert.",
+            "Wert Portfolio in {primaryCurrency} am {rateDate}",
+            "Portfolio in {primaryCurrency} am {rateDate}"
           ]
         },
         {
@@ -312,6 +316,10 @@
             "Wie viel ist zurzeit mein Portfolio in {primaryCurrency} Wert.",
             "Wie viel {primaryCurrency} ist aktuell mein Portfolio Wert.",
             "Was ist der aktuelle Wert in {primaryCurrency} meines Portfolios.",
+            "Was ist der aktuelle Wert meines Portfolios in {primaryCurrency}",
+            "Was ist der Wert meines Portfolios in {primaryCurrency}",
+            "Wert Portfolio in {primaryCurrency}",
+            "Portfolio in {primaryCurrency}",
             "Wie viel {primaryCurrency} ist mein Portfolio Wert.",
             "Welcher Betrag in {primaryCurrency} ist mein Portfolio Wert.",
             "Für wie viel {primaryCurrency} kann ich mein Portfolio verkaufen.",
