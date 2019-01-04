@@ -7,13 +7,13 @@ public class CryptoUtilsTest {
 
     @Test(expected = IllegalStateException.class)
     public void constructorTest() {
-        CryptoUtils utils = new CryptoUtils();
+        new CryptoUtils();
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void doubleToSpeechTestError() {
         double test =  1.456;
-        String res = CryptoUtils.doubleToSpeech(test, -10);
+        CryptoUtils.doubleToSpeech(test, -10);
     }
 
     @Test
