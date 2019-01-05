@@ -235,10 +235,12 @@
           ],
           "samples": [
             "Fuege {amount} {primaryCurrency} meinem Portfolio hinzu.",
+            "Fuege {amount} {primaryCurrency} dem Portfolio hinzu.",
             "Fuege {amount} {primaryCurrency} zu meinem Portfolio hinzu.",
             "Lege {amount} {primaryCurrency} in meinem Portfolio ab.",
             "Lege {amount} {primaryCurrency} im Portfolio ab.",
-            "Addiere {amount} {primaryCurrency} zu meinem Portfolio hinzu."
+            "Addiere {amount} {primaryCurrency} zu meinem Portfolio hinzu.",
+            "Addiere {amount} {primaryCurrency} meinem Portfolio hinzu."
           ]
         },
         {
@@ -272,10 +274,13 @@
           "samples": [
             "Was befindet sich in meinem Portfolio.",
             "Welche Währungen befinden sich im Portfolio.",
+            "Was ist in meinem Portfolio.",
+            "Was ist im Portfolio",
+            "Was befindet sich im Portfolio",
             "Inhalt Portfolio.",
             "Was ist der Inhalt meines Portfolios.",
-            "Was befindet sich alles im Portolio",
-            "Wie sieht mein Portfolio aus"
+            "Was befindet sich alles im Portolio.",
+            "Wie sieht mein Portfolio aus."
           ]
         },
         {

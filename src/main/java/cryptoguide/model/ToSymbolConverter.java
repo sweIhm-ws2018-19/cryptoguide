@@ -2,6 +2,7 @@ package cryptoguide.model;
 
 import java.util.HashMap;
 
+
 /**
  * This class provides a map with currencies to their equivalent currency codes.
  */

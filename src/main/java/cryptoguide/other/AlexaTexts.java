@@ -48,7 +48,7 @@ public class AlexaTexts {
                                          "Du kannst dir auch den aktuellen Wert des Portfolios ausgeben lassen. Sage dafür: " +
                                          "'Wie viel ist mein Portfolio in Euro Wert'. " +
                                          "Um dir den vergangenen Wert des Portfolios ausgeben zu lassen sage zum Beispiel: " +
-                                         "'Wie viel war mein'. ";
+                                         "'Wie viel war mein Portfolio in Euro am ersten Oktober 2019 wert'. ";
     public static final String GHPI_CTH = "Hilfe zum Portfolio";
 
     //GetCurrencyCodeIntentHandler GCCI
