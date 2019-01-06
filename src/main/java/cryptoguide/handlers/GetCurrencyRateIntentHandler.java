@@ -44,7 +44,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         String primarySymbol = ToSymbolConverter.convert(primaryCurrency.toLowerCase());
         String secondarySymbol = ToSymbolConverter.convert(secondaryCurrency.toLowerCase());
 
-        if (primarySymbol == null || secondarySymbol == null) {
+        if (checkInput(primarySymbol,secondarySymbol)) {
             return input.getResponseBuilder()
                     .withSimpleCard(AlexaTexts.GCRI_CTH_ERROR, AlexaTexts.GCRI_SP_ERROR_INVALID_CURRENCY)
                     .withSpeech(AlexaTexts.GCRI_SP_ERROR_INVALID_CURRENCY)
@@ -57,7 +57,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         int amount = 0;
         double pastRate = 0.0;
         double rateTrend = 0.0;
-        if (input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT)) || input.matches(intentName(GET_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
+        if (isACurrentRateIntent(input)) {
             //Aktuellen Kurs
             rate = CryptoCurrencyRateRetriever.getCurrentRate(primarySymbol, secondarySymbol);
         }
@@ -75,7 +75,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
                         .build();
             }
         }
-        if (input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
+        if (isAPastRateIntent(input)) {
             //Vergangenen Kurs
             String rateDate = slots.get("rateDate").getValue();
             long timestamp = TimestampGenerator.convertToTimeStamp(rateDate);
@@ -95,7 +95,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
             rateTrend =  (100 * rateDiff) / rate;
         }
 
-        if(rate != 0.0 || pastRate != 0.0) {
+        if(isValidRate(rate, pastRate)) {
             speechText = createSpeechText(input, rate, pastRate, rateTrend, primaryCurrency, secondaryCurrency, amount);
         } else {
             return input.getResponseBuilder()
@@ -147,5 +147,33 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
             }
         }
         return speechText;
+    }
+
+    private boolean checkInput(String primarySymbol, String secondarySymbol) {
+        if(primarySymbol == null || secondarySymbol == null) {
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isACurrentRateIntent(HandlerInput input) {
+        if(input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT)) || input.matches(intentName(GET_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isAPastRateIntent(HandlerInput input) {
+        if(input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean isValidRate(double rate, double pastRate) {
+        if(rate != 0.0 || pastRate != 0.0) {
+            return true;
+        }
+        return false;
     }
 }

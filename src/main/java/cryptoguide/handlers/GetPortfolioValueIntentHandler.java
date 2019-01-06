@@ -37,7 +37,7 @@ public class GetPortfolioValueIntentHandler implements RequestHandler {
         String speech = "Es ist ein Fehler aufgetreten.";
         if (input.matches(intentName("GetPortfolioValueIntent"))) {
             for(Map.Entry<String, Object> entry : content.entrySet()) {
-                int amount = Integer.valueOf((String) entry.getValue());
+                int amount = Integer.parseInt((String) entry.getValue());
                 value += CryptoCurrencyRateRetriever.getCurrentRate(entry.getKey(), currencyCode) * amount;
             }
             speech = "Dein Portfolio ist aktuell " + value + currency + " wert ";
@@ -45,7 +45,7 @@ public class GetPortfolioValueIntentHandler implements RequestHandler {
         } else if (input.matches(intentName("GetPastPortfolioValueIntent"))) {
             long timestamp = TimestampGenerator.convertToTimeStamp(slots.get("rateDate").getValue());
             for(Map.Entry<String, Object> entry : content.entrySet()) {
-                int amount = Integer.valueOf((String) entry.getValue());
+                int amount = Integer.parseInt((String) entry.getValue());
                 value += CryptoCurrencyRateRetriever.getPastRate(entry.getKey(), currencyCode, timestamp) * amount;
             }
             speech = "Dein Portfolio war in der Vergangenheit " + value + currency + " wert ";
