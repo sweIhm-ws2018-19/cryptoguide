@@ -150,30 +150,18 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
     }
 
     private boolean checkInput(String primarySymbol, String secondarySymbol) {
-        if(primarySymbol == null || secondarySymbol == null) {
-            return false;
-        }
-        return true;
+        return primarySymbol != null && secondarySymbol != null;
     }
 
     private boolean isACurrentRateIntent(HandlerInput input) {
-        if(input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT)) || input.matches(intentName(GET_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
-            return true;
-        }
-        return false;
+        return input.matches(intentName(CONVERT_CURRENCY_AMOUNT_INTENT)) || input.matches(intentName(GET_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT));
     }
 
     private boolean isAPastRateIntent(HandlerInput input) {
-        if(input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT))) {
-            return true;
-        }
-        return false;
+        return input.matches(intentName(GET_PAST_CURRENCY_RATE_INTENT)) || input.matches(intentName(GET_CURRENCY_TREND_INTENT));
     }
 
     private boolean isValidRate(double rate, double pastRate) {
-        if(rate != 0.0 || pastRate != 0.0) {
-            return true;
-        }
-        return false;
+        return rate != 0.0 || pastRate != 0.0;
     }
 }
