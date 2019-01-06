@@ -44,7 +44,7 @@ public class GetCurrencyRateIntentHandler implements RequestHandler {
         String primarySymbol = ToSymbolConverter.convert(primaryCurrency.toLowerCase());
         String secondarySymbol = ToSymbolConverter.convert(secondaryCurrency.toLowerCase());
 
-        if (checkInput(primarySymbol,secondarySymbol)) {
+        if (!checkInput(primarySymbol, secondarySymbol)) {
             return input.getResponseBuilder()
                     .withSimpleCard(AlexaTexts.GCRI_CTH_ERROR, AlexaTexts.GCRI_SP_ERROR_INVALID_CURRENCY)
                     .withSpeech(AlexaTexts.GCRI_SP_ERROR_INVALID_CURRENCY)
