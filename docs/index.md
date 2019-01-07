@@ -22,9 +22,9 @@ Auch der Wert in der Vergangenheit kann ermittelt werden.
 ![Sonarcloud_Reliability](https://sonarcloud.io/api/project_badges/measure?project=cryptoguide%3ACryptoGuide&metric=reliability_rating)
 ![Sonarcloud_Security](https://sonarcloud.io/api/project_badges/measure?project=cryptoguide%3ACryptoGuide&metric=security_rating)
 
-### Anwendungsfalldiagramm
+## Anwendungsfalldiagramm
 ![](https://github.com/sweIhm-ws2018-19/skillproject-do-3/blob/master/UML/Sprint0/UCAlexa.png)
 
-### Klassendiagramm
+## Klassendiagramm
 ![](https://github.com/sweIhm-ws2018-19/skillproject-do-3/blob/master/UML/Sprint0/Fachklassendiagramm.png)
 
