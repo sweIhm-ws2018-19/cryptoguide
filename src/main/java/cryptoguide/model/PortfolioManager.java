@@ -22,7 +22,7 @@ public class PortfolioManager {
             return 0;
         } else {
             Object obj = all.get(currencyCode);
-            return Integer.valueOf((String) obj).intValue();
+            return Integer.parseInt((String) obj);
         }
     }
 

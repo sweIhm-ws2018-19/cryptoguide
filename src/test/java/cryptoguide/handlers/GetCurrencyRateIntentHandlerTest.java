@@ -68,7 +68,6 @@ public class GetCurrencyRateIntentHandlerTest {
         assertFalse(response.getShouldEndSession());
         assertNotEquals("Test", response.getReprompt());
         assertNotNull(response.getOutputSpeech());
-        System.out.println(response.getOutputSpeech().toString());
         assertTrue(response.getOutputSpeech().toString().contains("Der Kurs von Bitcoin zu Dollar ist von"));
     }
 }

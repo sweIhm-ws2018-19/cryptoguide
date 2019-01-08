@@ -24,16 +24,14 @@ public class CryptoUtils {
     }
 
     public static String currencyMapToSpeech(Map<String, Object> inputMap) {
-        String speech = "";
+        StringBuilder builder = new StringBuilder("In deinem Portfolio befinden sich ");
         if(inputMap.isEmpty()) {
-            speech =  "In deinem Portfolio befinden sich aktuell keine Währungen.";
+            builder.append("aktuell keine Währungen.");
         } else {
-            speech = "In deinem Portfolio befinden sich ";
-
             for(Map.Entry<String, Object> entry : inputMap.entrySet()) {
-                speech += (entry.getValue() + " " + entry.getKey() + " ");
+                builder.append((entry.getValue() + " " + entry.getKey() + ", "));
             }
         }
-        return speech;
+        return builder.toString();
     }
 }
