@@ -79,24 +79,6 @@
           ]
         },
         {
-          "name": "GetCurrencyTrendIntent",
-          "slots": [
-            {
-              "name": "rateDate",
-              "type": "AMAZON.DATE"
-            },
-            {
-              "name": "primaryCurrency",
-              "type": "LIST_OF_CURRENCIES"
-            },
-            {
-              "name": "secondaryCurrency",
-              "type": "LIST_OF_CURRENCIES"
-            }
-          ],
-          "samples": []
-        },
-        {
           "name": "GetCurrencyCodeIntent",
           "slots": [
             {
