@@ -2,7 +2,7 @@
 
 ## Status
 ### Travis-CI
-[![Travis-CI Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-do-3.svg?branch=master)](https://travis-ci.org/sweIhm-ws2018-19/skillproject-do-3)
+[![Travis-CI Status](https://travis-ci.org/sweIhm-ws2018-19/skillproject-do-3.svg?branch=master)](https://travis-ci.org/sweIhm-ws2018-19/cryptoguide)
 
 ### Sonarcloud
 ![Sonarcloud Status](https://sonarcloud.io/api/project_badges/measure?project=cryptoguide%3ACryptoGuide&metric=alert_status)
