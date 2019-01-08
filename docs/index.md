@@ -12,8 +12,8 @@ Der aktuelle Wert deines gesamten Portfolios kann dann ganz einfach ermittelt we
 Auch der Wert in der Vergangenheit kann ermittelt werden.
 
 ## Anwendungsfalldiagramm
-![Anwendungsfalldiagramm](https://raw.githubusercontent.com/sweIhm-ws2018-19/cryptoguide/blob/master/docs/images/UCAlexa.png)
+![Anwendungsfalldiagramm](https://raw.githubusercontent.com/sweIhm-ws2018-19/cryptoguide/master/docs/images/UCAlexa.png)
 
 ## Klassendiagramm
-![Klassendiagramm](https://raw.githubusercontent.com/sweIhm-ws2018-19/cryptoguide/blob/master/docs/images/Fachklassendiagramm.png)
+![Klassendiagramm](https://raw.githubusercontent.com/sweIhm-ws2018-19/cryptoguide/master/docs/images/Fachklassendiagramm.png)
 
