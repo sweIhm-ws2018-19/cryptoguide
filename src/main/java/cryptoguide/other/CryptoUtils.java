@@ -29,7 +29,7 @@ public class CryptoUtils {
             builder.append("aktuell keine Währungen.");
         } else {
             for(Map.Entry<String, Object> entry : inputMap.entrySet()) {
-                builder.append((entry.getValue() + " " + entry.getKey() + " "));
+                builder.append((entry.getValue() + " " + entry.getKey() + ", "));
             }
         }
         return builder.toString();
