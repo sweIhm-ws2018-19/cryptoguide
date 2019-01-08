@@ -180,6 +180,37 @@
           ]
         },
         {
+          "name": "GetCurrencyTrendIntent",
+          "slots": [
+            {
+              "name": "rateDate",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "primaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            },
+            {
+              "name": "secondaryCurrency",
+              "type": "LIST_OF_CURRENCIES"
+            }
+          ],
+          "samples:": [
+            "Wie ist die Kursentwicklung seit {rateDate} von {primaryCurrency} zu {secondaryCurrency}",
+            "Wie hat sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate} entwickelt",
+            "Wie entwickelte sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Gib mir die Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Sag mir die Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Kursentwicklung von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Wie entwickelt sich der Kurs von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "Von {primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "{primaryCurrency} zu {secondaryCurrency} seit {rateDate}",
+            "{primaryCurrency} {secondaryCurrency} seit {rateDate}",
+            "{primaryCurrency} {secondaryCurrency} {rateDate}"
+          ]
+        },
+        {
           "name": "ConvertCurrencyAmountIntent",
           "slots": [
             {
